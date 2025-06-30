@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_AlexiWalkHandsHoldingItem_0: -8243343892090322945
+      T_AlexiWalkHandsHoldingItem_1: 7706022050657825240
+      T_AlexiWalkHandsHoldingItem_2: 8296809208548741984
+      T_AlexiWalkHandsHoldingItem_3: -1106302365518572781
+      T_AlexiWalkHandsHoldingItem_4: -1437162259867813792
+      T_AlexiWalkHandsHoldingItem_5: -8546051047249962278
+      T_AlexiWalkHandsHoldingItem_6: 2124777083127884982
+      T_AlexiWalkHandsHoldingItem_7: -8192293017687211567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
