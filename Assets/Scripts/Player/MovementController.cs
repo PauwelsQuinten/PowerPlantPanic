@@ -7,11 +7,13 @@ public class MovementController : MonoBehaviour
     [SerializeField]
     private Rigidbody2D _rb;
     [SerializeField]
-    private float _movingSpeed = 5;
+    private float _movingSpeed = 5, _rotatingSpeed = 1;
     [SerializeField]
-    private float _rotatingSpeed = 1;
+    private Animator _bodyAnim, _handsAnim;
     [SerializeField] 
     private InputAction _moveDirection;
+
+
 
     private SlideMovement _sMove;
 
@@ -33,9 +35,21 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
-        if(_moveDirection.ReadValue<Vector2>() != Vector2.zero)
+        if(_moveDirection.ReadValue<Vector2>() == Vector2.zero)
         {
-           _rb.Slide(_moveDirection.ReadValue<Vector2>(), _movingSpeed * Time.deltaTime, _sMove);
+            //Stop the moving animations
+            _bodyAnim.StartPlayback();
+            _handsAnim.StartPlayback();
+            //Don't Move
+            return;
+        }
+        else
+        {
+            //Play the animation
+            _bodyAnim.StopPlayback();
+            _handsAnim.StopPlayback();
+            //Move the player
+            _rb.Slide(_moveDirection.ReadValue<Vector2>(), _movingSpeed * Time.deltaTime, _sMove);
         }
 
         Vector2 direction = new Vector2(_moveDirection.ReadValue<Vector2>().x, _moveDirection.ReadValue<Vector2>().y);
