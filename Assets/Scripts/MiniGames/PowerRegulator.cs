@@ -44,6 +44,10 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     public void StartMiniGame(Component sender, object obj)
     {
         _updateProgress = true;
+        foreach (Image image in _lights)
+        {
+            image.color = Color.white;
+        }
         initializeMiniGame();
     }
     public void completed()
@@ -54,6 +58,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _timer = 0;
         _completedMiniGame.Raise(this, EventArgs.Empty);
         _updateProgress = false;
+        _yStartPoints.Clear();
+        _yfinishPoints.Clear();
         foreach (Image image in _lights)
         {
             image.color = Color.green;
@@ -69,6 +75,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _timer = 0;
         _failedMiniGame.Raise(this, EventArgs.Empty);
         _updateProgress = false;
+        _yStartPoints.Clear();
+        _yfinishPoints.Clear();
         foreach (Image image in _lights)
         {
             image.color = Color.red;
