@@ -1,9 +1,10 @@
-using NUnit.Framework;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.GPUSort;
 
 public class PowerRegulator : MonoBehaviour, IMiniGame
 {
@@ -15,6 +16,16 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     List<GameObject> _sliderObject = new List<GameObject>();
     [SerializeField]
     List<GameObject> _disiredLocations = new List<GameObject>();
+    [SerializeField]
+    private GameEvent _completedMiniGame;
+    [SerializeField]
+    private GameEvent _failedMiniGame;
+    [SerializeField]
+    private List<Image> _lights;
+    [SerializeField]
+    private Image _progressBar;
+    [SerializeField]
+    private float _progressSpeed;
 
     private List<int> _yStartPoints = new List<int>();
     private List<int> _yfinishPoints = new List<int>();
@@ -24,29 +35,56 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private GameObject _activeSlider;
 
     private bool _isHoldingSlider;
+
+    private List<GameObject> _completedSliders = new List<GameObject>();
+
+    private float _timer;
+
+    private bool _updateProgress;
     public void StartMiniGame(Component sender, object obj)
     {
+        _updateProgress = true;
         initializeMiniGame();
     }
     public void completed()
     {
-        throw new System.NotImplementedException();
+        _completedSliders.Clear();
+        _isHoldingSlider = false;
+        _activeSlider = null;
+        _timer = 0;
+        _completedMiniGame.Raise(this, EventArgs.Empty);
+        _updateProgress = false;
+        foreach (Image image in _lights)
+        {
+            image.color = Color.green;
+        }
+        StartCoroutine(DissableUI());
     }
 
     public void failed()
     {
-        throw new System.NotImplementedException();
+        _completedSliders.Clear();
+        _isHoldingSlider = false;
+        _activeSlider = null;
+        _timer = 0;
+        _failedMiniGame.Raise(this, EventArgs.Empty);
+        _updateProgress = false;
+        foreach (Image image in _lights)
+        {
+            image.color = Color.red;
+        }
+        StartCoroutine(DissableUI());
     }
 
     private void initializeMiniGame()
     {
         for (int i = 0; i < _numberOfSliders; i++)
         {
-            int startHeight = Random.Range(1, 6);
-            int desiredHeight = Random.Range(1, 6);
+            int startHeight = UnityEngine.Random.Range(1, 6);
+            int desiredHeight = UnityEngine.Random.Range(1, 6);
             while(startHeight >= desiredHeight - 1 && startHeight <= desiredHeight + 1)
             {
-                 startHeight = Random.Range(1, 6);
+                 startHeight = UnityEngine.Random.Range(1, 6);
             }
             _yStartPoints.Add(-260 + ((startHeight - 1) * 130));
 
@@ -65,9 +103,78 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _miniGameUI.SetActive(true);
     }
 
+    private void MoveRandomSlider(GameObject activeSlider)
+    {
+        int hitChance = UnityEngine.Random.Range(1, 3);
+        if (hitChance != 2) return;
+        int index = UnityEngine.Random.Range(0, 3);
+        GameObject randomSlider = _sliderObject[index];
+
+        while(randomSlider == activeSlider)
+        {
+            index = UnityEngine.Random.Range(0, 3);
+            randomSlider = _sliderObject[index];
+        }
+
+        int direction = UnityEngine.Random.Range(1, 3);
+
+        Vector3 newpos = randomSlider.transform.position;
+        if (direction == 1 && randomSlider.transform.localPosition.y > -260) newpos.y -= 130;
+        else if (direction == 2 && randomSlider.transform.localPosition.y < 260) newpos.y += 130;
+
+        randomSlider.transform.position = newpos;
+
+        if (_completedSliders.Contains(randomSlider))
+        {
+            _completedSliders.Remove(randomSlider);
+        }
+    }
+
+    private void CheckSolution()
+    {
+        for(int i = 0; i < _sliderObject.Count; i++)
+        {
+            if (_sliderObject[i].transform.position.y == _disiredLocations[i].transform.position.y)
+            {
+                if (!_completedSliders.Contains(_sliderObject[i]))
+                    _completedSliders.Add(_sliderObject[i]);
+            }
+        }
+
+        if (_completedSliders.Count == 3) completed();
+    }
+
+    private void MoveSlider(Vector3 newpos)
+    {
+        _activeSlider.transform.position = newpos;
+
+        MoveRandomSlider(_activeSlider);
+
+        CheckSolution();
+    }
+
+    private void UpdateProgressBar(float progress)
+    {
+        if (progress >= 100)
+        {
+            failed();
+            return;
+        }
+        float fillAmount = progress / 100;
+        _progressBar.fillAmount = fillAmount;
+    }
+
     private void Update()
     {
         if (!_miniGameUI.activeSelf) return;
+
+        if (_updateProgress)
+        {
+            _timer += Time.deltaTime * _progressSpeed;
+
+            UpdateProgressBar(_timer);
+        }
+
         if (Mouse.current.leftButton.IsPressed())
         {
             _isHoldingSlider = true;
@@ -77,17 +184,16 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             Vector2 mousePos = Mouse.current.position.ReadValue();
             if (Vector2.Distance(objectPos, mousePos) < 130) return;
             Debug.Log("reachedMax");
-            if (objectPos.y < mousePos.y && objectPos.y < 260)
+            if (objectPos.y < mousePos.y && _activeSlider.transform.localPosition.y < 260)
             {
                 objectPos.y += 130;
+                MoveSlider(objectPos);
             }
-            else if (objectPos.y > mousePos.y && objectPos.y > -260)
+            else if (objectPos.y > mousePos.y && _activeSlider.transform.localPosition.y > -260)
             {
                 objectPos.y -= 130;
+                MoveSlider(objectPos);
             }
-
-            _activeSlider.transform.position = objectPos;
-
         }
         else if(Mouse.current.leftButton.wasReleasedThisFrame)
         {
@@ -96,9 +202,15 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         }
     }
 
-        public void SetActivatedSlider(Component sender, object obj)
+    public void SetActivatedSlider(Component sender, object obj)
     {
         if (_isHoldingSlider) return;
         _activeSlider = obj as GameObject;
+    }
+
+    private IEnumerator DissableUI()
+    {
+        yield return new WaitForSeconds(0.75f);
+        _miniGameUI.SetActive(false);
     }
 }
