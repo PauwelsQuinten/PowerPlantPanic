@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,10 +126,10 @@ TextureImporter:
         serializedVersion: 2
         x: 7
         y: 1217
-        width: 216
+        width: 1015
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -146,34 +146,12 @@ TextureImporter:
       name: T_AlexiWalkHandsEmpty_1
       rect:
         serializedVersion: 2
-        x: 802
-        y: 1217
-        width: 216
-        height: 247
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a312657de79ba5c0800000000000000
-      internalID: -4203098781087820889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_AlexiWalkHandsEmpty_2
-      rect:
-        serializedVersion: 2
         x: 1048
-        y: 1209
-        width: 229
-        height: 244
+        y: 1129
+        width: 990
+        height: 324
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,37 +165,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_AlexiWalkHandsEmpty_3
-      rect:
-        serializedVersion: 2
-        x: 1830
-        y: 1142
-        width: 200
-        height: 248
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 676e5d01713e89430800000000000000
-      internalID: 3790028774638478966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_AlexiWalkHandsEmpty_4
+      name: T_AlexiWalkHandsEmpty_2
       rect:
         serializedVersion: 2
         x: 7
         y: 193
-        width: 216
+        width: 1017
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -231,59 +187,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_AlexiWalkHandsEmpty_5
+      name: T_AlexiWalkHandsEmpty_3
       rect:
         serializedVersion: 2
-        x: 802
-        y: 193
-        width: 216
-        height: 247
+        x: 1062
+        y: 84
+        width: 976
+        height: 371
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 77ef7d2a99c0c02e0800000000000000
-      internalID: -2158336267415716233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_AlexiWalkHandsEmpty_6
-      rect:
-        serializedVersion: 2
-        x: 1066
-        y: 86
-        width: 216
-        height: 246
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e26143771c1cc6340800000000000000
-      internalID: 4858471134698673710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: T_AlexiWalkHandsEmpty_7
-      rect:
-        serializedVersion: 2
-        x: 1822
-        y: 208
-        width: 216
-        height: 247
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -300,7 +212,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8fee7872fc3c09648be3a823dedaa6c1
     internalID: 0
     vertices: []
     indices: 
@@ -309,7 +221,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_AlexiWalkHandsEmpty_0: -5947046851819451851
+      T_AlexiWalkHandsEmpty_1: -6539580019699518072
+      T_AlexiWalkHandsEmpty_2: -7981647446667318131
+      T_AlexiWalkHandsEmpty_3: 5143487877437428126
+      T_AlexiWalkHandsEmpty_5: -2158336267415716233
+      T_AlexiWalkHandsEmpty_6: 4858471134698673710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -272,6 +272,16 @@ MonoBehaviour:
   playerTransform: {fileID: 1019339289}
   _offset: {x: 0, y: 0}
   _smoothTime: 0.6
+--- !u!95 &532884211 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7256123354750154405, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
+  m_PrefabInstance: {fileID: 637658190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &634818048 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3719500184469873988, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
+  m_PrefabInstance: {fileID: 637658190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &637658190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,6 +334,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7994807786281305073, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
+      propertyPath: _bodyAnim
+      value: 
+      objectReference: {fileID: 634818048}
+    - target: {fileID: 7994807786281305073, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
+      propertyPath: _handsAnim
+      value: 
+      objectReference: {fileID: 532884211}
     - target: {fileID: 7994807786281305073, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
       propertyPath: _movingSpeed
       value: 5

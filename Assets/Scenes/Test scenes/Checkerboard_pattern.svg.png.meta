@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Checkerboard_pattern.svg_0: 8332651801246501860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
