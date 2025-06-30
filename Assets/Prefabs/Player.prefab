@@ -1,5 +1,92 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2445986380803723503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3583783600047095187}
+  - component: {fileID: 9110572017593114480}
+  m_Layer: 3
+  m_Name: Looking_Direction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3583783600047095187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445986380803723503}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2382255452762252047}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &9110572017593114480
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445986380803723503}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.0724082, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &7137866149891071014
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +120,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 986896165434608567}
+  - {fileID: 3583783600047095187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &76266570230901813
@@ -50,7 +138,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -110,43 +198,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921c1c73934d51f42b4a717b900bc131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rb: {fileID: 0}
-  _speed: 1
-  _moveUp:
-    m_Name: Move Up
+  _rb: {fileID: 76266570230901813}
+  _speed: 5
+  _moveDirection:
+    m_Name: Move Direction
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: ee3e9e89-3a59-4a1f-9b82-ea3c3e029163
+    m_Id: 4bce523d-cf45-4bea-b145-b9b2e4fb00ab
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  _moveDown:
-    m_Name: Move Down
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 1ef54603-bf7c-4d83-8a5c-8f9217f609aa
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  _moveLeft:
-    m_Name: Move Left
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 9013bb3e-8ab6-466a-86b5-5c6808ea6b03
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  _moveRight:
-    m_Name: Move Right
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 4a38e93c-9c5e-4d7b-9387-ee719df96c95
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: Arrow Keys
+      m_Id: bb442cfe-e17d-418d-8cb2-09fb9fa847aa
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 4
+    - m_Name: up
+      m_Id: b1d770b3-1c6c-4170-b74d-39f1a9af4d78
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 974bcba7-e02e-4504-8544-3eef96a5389b
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 4cb0b855-aef0-4639-bcf4-ef66afd9a6a3
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 5f950e2a-4e8b-42ef-b067-441c573d4ee3
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
+    - m_Name: AWSD
+      m_Id: f888615c-aab3-4c62-856e-dfbe5add0459
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 8d1db7c5-2514-4fd7-9c44-0c047bba1f15
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 5af28c85-2ab7-4f50-9281-9e8878ce4d78
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 1d406850-8291-4340-a62c-a60c98fdcd6d
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
+    - m_Name: right
+      m_Id: ca4d88e7-28cc-4f63-8b32-cd8fa9930c8a
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Direction
+      m_Flags: 8
     m_Flags: 0
 --- !u!1 &9214849143869153359
 GameObject:
