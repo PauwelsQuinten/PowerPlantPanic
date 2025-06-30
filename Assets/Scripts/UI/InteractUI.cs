@@ -6,7 +6,9 @@ public class InteractUI : MonoBehaviour
     private GameObject _ui;
     public void ChangeInteractUI(Component sender, object obj)
     {
-        if (_ui.activeSelf)
+        bool? setActive = obj as bool?;
+
+        if (!(bool)setActive)
         {
             _ui.SetActive(false);
         }

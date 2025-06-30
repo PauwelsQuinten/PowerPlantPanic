@@ -10,6 +10,8 @@ public class Interaction : MonoBehaviour
     private GameEvent _changeInteractionUI;
     [SerializeField]
     private GameEvent _interact;
+    [SerializeField]
+    private MonoBehaviour _miniGame;
 
 
     private bool _isInTrigger;
@@ -17,7 +19,7 @@ public class Interaction : MonoBehaviour
     {
         if (!IsLayerInMask(_playerMask, collision.gameObject.layer)) return;
 
-        _changeInteractionUI.Raise(this, EventArgs.Empty);
+        _changeInteractionUI.Raise(this, true);
         _isInTrigger = true;
     }
 
@@ -25,7 +27,7 @@ public class Interaction : MonoBehaviour
     {
         if (!IsLayerInMask(_playerMask, collision.gameObject.layer)) return;
 
-        _changeInteractionUI.Raise(this, EventArgs.Empty);
+        _changeInteractionUI.Raise(this, false);
         _isInTrigger = false;
     }
 
@@ -36,8 +38,13 @@ public class Interaction : MonoBehaviour
 
     public void interact(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed && !_isInTrigger) return;
+        if (!ctx.performed) return;
+        if (!_isInTrigger) return;
 
-        _interact.Raise(this, EventArgs.Empty);
+        _changeInteractionUI.Raise(this, false);
+
+        if (_miniGame == null)
+            _interact.Raise(this, EventArgs.Empty);
+        else _interact.Raise(this, _miniGame as IMiniGame);
     }
 }
