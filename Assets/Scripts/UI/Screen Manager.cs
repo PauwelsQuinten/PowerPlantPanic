@@ -5,30 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class ScreenManager : MonoBehaviour
 {
-    [SerializeField]
-    private List<SceneAsset> _scenesAssets;
-
-    private List<Scene> _scenes = new List<Scene>();
+    private int _scenes;
 
     private void Start()
     {
-        int sceneAssetIndex = 0;
-        //Transform all the sceneAssets to scenes
-        foreach (var item in _scenesAssets)
-        {
-            _scenes.Add(SceneManager.GetSceneByName(_scenesAssets[sceneAssetIndex].name));
-            sceneAssetIndex++;
-        }
+        _scenes = SceneManager.sceneCountInBuildSettings;
     }
 
     public void StartGame() //Next scene is the main game
     {
-        int nextSceneIndex;
-
-        nextSceneIndex = _scenes.IndexOf(SceneManager.GetActiveScene()) + 1;
-
-        SceneManager.LoadSceneAsync(nextSceneIndex, LoadSceneMode.Single);
-        //SceneManager.SetActiveScene(_scenes[nextSceneIndex]);
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
     }
 
     public void Quit()
@@ -38,8 +24,11 @@ public class ScreenManager : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadSceneAsync(_scenes.Count -1, LoadSceneMode.Single);
-        //SceneManager.SetActiveScene(_scenes[_scenes.Count-1]);
+        SceneManager.LoadSceneAsync(_scenes -1, LoadSceneMode.Single);
     }
 
+    public void StartMenu()
+    {
+        SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+    }
 }
