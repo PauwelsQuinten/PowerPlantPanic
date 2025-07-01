@@ -1,5 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using static UnityEngine.Rendering.GPUSort;
 
 public class ControlPanelUI : MonoBehaviour
 {
@@ -7,6 +10,14 @@ public class ControlPanelUI : MonoBehaviour
     private GameObject _ui;
     [SerializeField]
     private TextMeshProUGUI _powerEfficiency;
+    [SerializeField]
+    private TextMeshProUGUI _fanRPM;
+    [SerializeField]
+    private GameObject _pressureNeedle;
+    [SerializeField]
+    private Image _wasteLight;
+    [SerializeField]
+    private GameEvent _gameLost;
 
     public void EnableUi(Component sender, object obj)
     {
@@ -21,5 +32,37 @@ public class ControlPanelUI : MonoBehaviour
         if (args == null) return;
 
         _powerEfficiency.text = $"{args.PowerEfficiency} %";
+    }
+
+    public void FanRPMChanged(Component sender, object obj)
+    {
+        FanRPMChangedEventArgs args = obj as FanRPMChangedEventArgs;
+        if (args == null) return;
+
+        _fanRPM.text = args.FanRPM.ToString();
+    }
+
+    public void PipePressureChanged(Component sender, object obj)
+    {
+        PipePresureEventArgs args = obj as PipePresureEventArgs;
+        if (args == null) return;
+
+        float newAngle = (args.PiperPressure / 150f  * 135f - 90f) * -1f;
+        _pressureNeedle.transform.eulerAngles = new Vector3(0, 0, newAngle);
+    }
+
+    public void WasteTimerChanged(Component sender, object obj)
+    {
+        WasteTimerChangedEventArgs args = obj as WasteTimerChangedEventArgs;
+        if (args == null) return;
+
+        if (_wasteLight.color == Color.white)
+            _wasteLight.color = Color.red;
+        else _wasteLight.color = Color.white;
+    }
+
+    public void GiveUp()
+    {
+        _gameLost.Raise(this, EventArgs.Empty);
     }
 }

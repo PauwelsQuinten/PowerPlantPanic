@@ -8,6 +8,8 @@ public class MiniGameFinishedEventArgs : EventArgs
 
 public enum MiniGame 
 {
-    PowerRegulating
+    PowerRegulating,
+    FanBlock,
+    PiperBroke
 }
 
