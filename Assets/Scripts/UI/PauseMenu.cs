@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
 
     private int _scenes;
 
+    private bool _canPause;
+
     private void OnEnable()
     {
         _scenes = SceneManager.sceneCountInBuildSettings;
@@ -28,6 +30,7 @@ public class PauseMenu : MonoBehaviour
 
     private void _pauseButton_started(InputAction.CallbackContext obj)
     {
+        if (!_canPause) return;
         Time.timeScale = 0f;
         _pauseMenu.SetActive(true);
     }
@@ -48,5 +51,11 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         _pauseMenu.SetActive(false);
+    }
+
+    public void CanPause(Component sender, object obj)
+    {
+        bool? setActive = obj as bool?;
+        _canPause = !(bool)setActive;
     }
 }
