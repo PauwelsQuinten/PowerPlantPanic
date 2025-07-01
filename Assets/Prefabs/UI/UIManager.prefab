@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784073696290054026}
   - component: {fileID: 6980723673616064319}
+  - component: {fileID: 15325513086521114}
   - component: {fileID: 1418606777079147112}
   m_Layer: 0
   m_Name: UIManager
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ui: {fileID: 0}
+--- !u!114 &15325513086521114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7398ea1df9deb543bc8279722d30a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerEfficiency: {fileID: 0}
 --- !u!114 &1418606777079147112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,12 +74,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Events:
   - {fileID: 11400000, guid: 260b9d26a9b1d9046babf47a6f0e54da, type: 2}
+  - {fileID: 11400000, guid: 01d4f73f48f7fbd4599c6a71a9699742, type: 2}
   Responses:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6980723673616064319}
         m_TargetAssemblyTypeName: InteractUI, Assembly-CSharp
         m_MethodName: ChangeInteractUI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 15325513086521114}
+        m_TargetAssemblyTypeName: ControlPanelUI, Assembly-CSharp
+        m_MethodName: PowerEfficiencyChanged
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

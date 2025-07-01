@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 0}
   _completedMiniGame: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
   _failedMiniGame: {fileID: 11400000, guid: d56dc2c393481e849b9db447416dba28, type: 2}
+  _dissableTrigger: {fileID: 11400000, guid: 1bc734a01b73f38498bb9520cb39928c, type: 2}
   _lights:
   - {fileID: 0}
   - {fileID: 0}
