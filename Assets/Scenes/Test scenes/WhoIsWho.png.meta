@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 08059b8f6118c7745ace198b8df8cd2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9114112771112784463
+    second: WhoIsWho_0
+  - first:
+      213: 8005403471887501777
+    second: WhoIsWho_1
+  - first:
+      213: -9160785883977738455
+    second: WhoIsWho_2
+  - first:
+      213: 7526296621280350788
+    second: WhoIsWho_3
+  - first:
+      213: 7578827167430204847
+    second: WhoIsWho_4
+  - first:
+      213: -7836586559275209128
+    second: WhoIsWho_5
+  - first:
+      213: 2168396334899447526
+    second: WhoIsWho_6
+  - first:
+      213: -7346860135941797088
+    second: WhoIsWho_7
+  - first:
+      213: 8636045913387527890
+    second: WhoIsWho_8
+  - first:
+      213: -7004507577151492486
+    second: WhoIsWho_9
+  - first:
+      213: -6859263597220081483
+    second: WhoIsWho_10
+  - first:
+      213: 4439379595672429869
+    second: WhoIsWho_11
+  - first:
+      213: 3740848318484993219
+    second: WhoIsWho_12
+  - first:
+      213: 4320958919466547034
+    second: WhoIsWho_13
+  - first:
+      213: 2502800742690288831
+    second: WhoIsWho_14
+  - first:
+      213: -3919472988683524419
+    second: WhoIsWho_15
+  - first:
+      213: -1628067445823169981
+    second: WhoIsWho_16
+  - first:
+      213: -4427148298319089939
+    second: WhoIsWho_17
+  - first:
+      213: -543622745160152998
+    second: WhoIsWho_18
+  - first:
+      213: -4708175687261446740
+    second: WhoIsWho_19
+  - first:
+      213: -1762528668458687785
+    second: WhoIsWho_20
+  - first:
+      213: 7033302536824744849
+    second: WhoIsWho_21
+  - first:
+      213: -1132564403361637183
+    second: WhoIsWho_22
+  - first:
+      213: -3017664327849402461
+    second: WhoIsWho_23
+  - first:
+      213: -8255113117824030370
+    second: WhoIsWho_24
+  - first:
+      213: 7696975935768430355
+    second: WhoIsWho_25
+  - first:
+      213: 7655492813274528822
+    second: WhoIsWho_26
+  - first:
+      213: 8087227939147636909
+    second: WhoIsWho_27
+  - first:
+      213: 5138202655676057507
+    second: WhoIsWho_28
+  - first:
+      213: -1649208449159354486
+    second: WhoIsWho_29
+  - first:
+      213: -5244907150798477973
+    second: WhoIsWho_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WhoIsWho_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 171
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bda8fa29ba248180800000000000000
+      internalID: -9114112771112784463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 174
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d988811b08e81f60800000000000000
+      internalID: 8005403471887501777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_2
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 170
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927181246c95ed080800000000000000
+      internalID: -9160785883977738455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_3
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 167
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44253a9a6e6c27860800000000000000
+      internalID: 7526296621280350788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_4
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 168
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadd1c887276d2960800000000000000
+      internalID: 7578827167430204847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 170
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85eecca5b0ade3390800000000000000
+      internalID: -7836586559275209128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_6
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 170
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6c0f95af0b71e10800000000000000
+      internalID: 2168396334899447526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_7
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 190
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b06b6b1a5ba0a90800000000000000
+      internalID: -7346860135941797088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 174
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de6d63a00669d770800000000000000
+      internalID: 8636045913387527890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_9
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 170
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e6a55587dface90800000000000000
+      internalID: -7004507577151492486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_10
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 174
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0ddeaa9100fc0a0800000000000000
+      internalID: -6859263597220081483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_11
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 172
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d252c2fa838db9d30800000000000000
+      internalID: 4439379595672429869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_12
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 170
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c45aedc9b92ae330800000000000000
+      internalID: 3740848318484993219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_13
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 170
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57fbdb6e3127fb30800000000000000
+      internalID: 4320958919466547034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_14
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 174
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb473abd30cbbb220800000000000000
+      internalID: 2502800742690288831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_15
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 61
+        width: 130
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6a7c2451c3b99c0800000000000000
+      internalID: -3919472988683524419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_16
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 38
+        width: 54
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a155da841f769e0800000000000000
+      internalID: -1628067445823169981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_17
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 55
+        width: 128
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee27b6241c9f82c0800000000000000
+      internalID: -4427148298319089939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_18
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 61
+        width: 130
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5808e65ef9a478f0800000000000000
+      internalID: -543622745160152998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 40
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad96ac482339aeb0800000000000000
+      internalID: -4708175687261446740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_20
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 22
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2e31aa38d3a87e0800000000000000
+      internalID: -1762528668458687785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_21
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 41
+        width: 41
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19bea49a46f4b9160800000000000000
+      internalID: 7033302536824744849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_22
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 41
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc906cfca25840f0800000000000000
+      internalID: -1132564403361637183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_23
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 43
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af1b27384a1f16d0800000000000000
+      internalID: -3017664327849402461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_24
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 26
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e596e675b52ff6d80800000000000000
+      internalID: -8255113117824030370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_25
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 43
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317053055d621da60800000000000000
+      internalID: 7696975935768430355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_26
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 23
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63cb8c33726cd3a60800000000000000
+      internalID: 7655492813274528822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_27
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 26
+        width: 49
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da0628276fa9b3070800000000000000
+      internalID: 8087227939147636909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_28
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 26
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a74a8b87109e4740800000000000000
+      internalID: 5138202655676057507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_29
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 10
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87a84347a5dc19e0800000000000000
+      internalID: -1649208449159354486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhoIsWho_30
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 10
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6520cc2cb85637b0800000000000000
+      internalID: -5244907150798477973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WhoIsWho_0: -9114112771112784463
+      WhoIsWho_1: 8005403471887501777
+      WhoIsWho_10: -6859263597220081483
+      WhoIsWho_11: 4439379595672429869
+      WhoIsWho_12: 3740848318484993219
+      WhoIsWho_13: 4320958919466547034
+      WhoIsWho_14: 2502800742690288831
+      WhoIsWho_15: -3919472988683524419
+      WhoIsWho_16: -1628067445823169981
+      WhoIsWho_17: -4427148298319089939
+      WhoIsWho_18: -543622745160152998
+      WhoIsWho_19: -4708175687261446740
+      WhoIsWho_2: -9160785883977738455
+      WhoIsWho_20: -1762528668458687785
+      WhoIsWho_21: 7033302536824744849
+      WhoIsWho_22: -1132564403361637183
+      WhoIsWho_23: -3017664327849402461
+      WhoIsWho_24: -8255113117824030370
+      WhoIsWho_25: 7696975935768430355
+      WhoIsWho_26: 7655492813274528822
+      WhoIsWho_27: 8087227939147636909
+      WhoIsWho_28: 5138202655676057507
+      WhoIsWho_29: -1649208449159354486
+      WhoIsWho_3: 7526296621280350788
+      WhoIsWho_30: -5244907150798477973
+      WhoIsWho_4: 7578827167430204847
+      WhoIsWho_5: -7836586559275209128
+      WhoIsWho_6: 2168396334899447526
+      WhoIsWho_7: -7346860135941797088
+      WhoIsWho_8: 8636045913387527890
+      WhoIsWho_9: -7004507577151492486
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
