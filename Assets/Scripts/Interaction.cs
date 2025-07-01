@@ -12,9 +12,11 @@ public class Interaction : MonoBehaviour
     private GameEvent _interact;
     [SerializeField]
     private MonoBehaviour _miniGame;
-
+    [SerializeField]
+    private InputActionReference _interactInput;
 
     private bool _isInTrigger;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!IsLayerInMask(_playerMask, collision.gameObject.layer)) return;
@@ -30,21 +32,25 @@ public class Interaction : MonoBehaviour
         _changeInteractionUI.Raise(this, false);
         _isInTrigger = false;
     }
-
     private bool IsLayerInMask(LayerMask mask, int layer)
     {
         return (mask & (1 << layer)) != 0;
     }
 
-    public void interact(InputAction.CallbackContext ctx)
+    private void Update()
     {
-        if (!ctx.performed) return;
+        if (!_interactInput.action.WasPressedThisFrame()) return;
         if (!_isInTrigger) return;
 
-        _changeInteractionUI.Raise(this, false);
-
         if (_miniGame == null)
+        {
             _interact.Raise(this, EventArgs.Empty);
-        else _interact.Raise(this, _miniGame as IMiniGame);
+            _changeInteractionUI.Raise(this, false);
+        }
+        else
+        {
+            _interact.Raise(this, _miniGame as IMiniGame);
+            _changeInteractionUI.Raise(this, false);
+        }
     }
 }
