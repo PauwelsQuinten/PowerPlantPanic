@@ -139,10 +139,10 @@ TextureImporter:
         serializedVersion: 2
         x: 201
         y: 1083
-        width: 228
+        width: 639
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -156,37 +156,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_AlexiWalkHandsHoldingItem_1
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 1085
-        width: 223
-        height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d179c01a3a41fa60800000000000000
-      internalID: 7706022050657825240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: T_AlexiWalkHandsHoldingItem_2
       rect:
         serializedVersion: 2
         x: 1178
-        y: 1083
-        width: 220
-        height: 254
+        y: 1033
+        width: 633
+        height: 304
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,37 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_AlexiWalkHandsHoldingItem_3
-      rect:
-        serializedVersion: 2
-        x: 1583
-        y: 1031
-        width: 229
-        height: 253
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31357192cdf95a0f0800000000000000
-      internalID: -1106302365518572781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: T_AlexiWalkHandsHoldingItem_4
       rect:
         serializedVersion: 2
         x: 201
-        y: 59
-        width: 228
-        height: 254
+        y: 61
+        width: 640
+        height: 252
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -244,37 +200,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_AlexiWalkHandsHoldingItem_5
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 61
-        width: 223
-        height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ada9f48f9d3566980800000000000000
-      internalID: -8546051047249962278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: T_AlexiWalkHandsHoldingItem_6
       rect:
         serializedVersion: 2
         x: 1261
-        y: 10
-        width: 230
-        height: 252
+        y: 11
+        width: 633
+        height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,33 +221,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: T_AlexiWalkHandsHoldingItem_7
-      rect:
-        serializedVersion: 2
-        x: 1679
-        y: 50
-        width: 216
-        height: 252
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d147d0b7e02f4e80800000000000000
-      internalID: -8192293017687211567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 414ff5e832c4a374aa2aec11f5a16546
     internalID: 0
     vertices: []
     indices: 
