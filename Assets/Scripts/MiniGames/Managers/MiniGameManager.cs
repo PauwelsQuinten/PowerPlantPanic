@@ -18,6 +18,16 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
+    public void EnableTurbinTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "TurbinTrigger") continue;
+            go.SetActive(!go.activeSelf);
+            return;
+        }
+    }
+
     public void StartMiniGame(Component sender, object obj)
     {
         _currentMiniGame = obj as IMiniGame;
