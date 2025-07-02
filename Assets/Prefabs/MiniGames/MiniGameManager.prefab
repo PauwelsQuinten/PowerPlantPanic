@@ -97,7 +97,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1782859304227366780}
         m_TargetAssemblyTypeName: MiniGameManager, Assembly-CSharp
-        m_MethodName: EnableOutputTrigger
+        m_MethodName: EnablePressureControlTrigger
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

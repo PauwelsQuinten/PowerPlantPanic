@@ -206,7 +206,7 @@ public class CentralControlPanel : MonoBehaviour
                 StopCoroutine(_decreasePipePressure);
                 _canDecreasePipePressure = false;
                 _pipePSI = 150;
-                _pipePressureChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = _fanRPM });
+                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = _pipePSI });
                 break;
         }
     }
