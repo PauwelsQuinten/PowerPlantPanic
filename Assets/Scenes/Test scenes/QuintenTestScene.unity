@@ -1446,7 +1446,7 @@ Transform:
   m_GameObject: {fileID: 695706245}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.30419937, w: 0.95260847}
-  m_LocalPosition: {x: -2.9762945, y: 1.0369554, z: 0}
+  m_LocalPosition: {x: -4.01, y: 0.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1641,7 +1641,7 @@ Transform:
   m_GameObject: {fileID: 751627519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.30419937, w: 0.95260847}
-  m_LocalPosition: {x: -4.173216, y: 0.4544556, z: 0}
+  m_LocalPosition: {x: -5.21, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1955,7 +1955,7 @@ Transform:
   m_GameObject: {fileID: 1064667498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.30419937, w: 0.95260847}
-  m_LocalPosition: {x: -4.463217, y: 0.86912566, z: 0}
+  m_LocalPosition: {x: -5.5, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2411,7 +2411,7 @@ Transform:
   m_GameObject: {fileID: 1232931493}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.30419937, w: 0.95260847}
-  m_LocalPosition: {x: -5.529591, y: -0.6181676, z: 0}
+  m_LocalPosition: {x: -6.57, y: -1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2465,6 +2465,30 @@ PrefabInstance:
       propertyPath: _ui
       value: 
       objectReference: {fileID: 8340582974973732636}
+    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: Responses.Array.data[8].m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: Responses.Array.data[8].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1679795728}
+    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: Responses.Array.data[8].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: Responses.Array.data[8].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CanPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: Responses.Array.data[8].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: Responses.Array.data[8].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1784073696290054026, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 845.98
@@ -2740,7 +2764,7 @@ MonoBehaviour:
   _pipePrefabs:
   - {fileID: 7811148123428551610, guid: 3ee5b81e25b34984da93f679d02e3417, type: 3}
   - {fileID: 5430347498400319334, guid: b0499ba490cb50547ae35b46ebeadefb, type: 3}
-  - {fileID: 3175713427274533201, guid: 33a099fdfb4b0c142a9c80df324ac06a, type: 3}
+  - {fileID: 1146523946623538136, guid: 63364a5d1d19cba40a9f80b9f75f2cfa, type: 3}
   _brokenPipePrefabs:
   - {fileID: 7948102582655002196, guid: 97170310535f17141b4bc56030c9d21b, type: 3}
   - {fileID: 3056443882352172061, guid: f42c1ca7462d9614d9f2e6b994799c4d, type: 3}
@@ -2749,6 +2773,7 @@ MonoBehaviour:
   _openPressureControlUI: {fileID: 11400000, guid: 00d5ecc1dee2e4f449c1169d840a77f2, type: 2}
   _itemHolder: {fileID: 487308558}
   _closePanel: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _miniGameFinished: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
 --- !u!4 &1512672270
 Transform:
   m_ObjectHideFlags: 0
