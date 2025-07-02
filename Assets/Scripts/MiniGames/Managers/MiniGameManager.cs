@@ -18,6 +18,16 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
+    public void EnablePressureControlTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "PressureControlTrigger") continue;
+            go.SetActive(!go.activeSelf);
+            return;
+        }
+    }
+
     public void StartMiniGame(Component sender, object obj)
     {
         _currentMiniGame = obj as IMiniGame;
