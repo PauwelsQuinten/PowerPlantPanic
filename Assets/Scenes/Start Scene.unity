@@ -238,11 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5fbf0166153ad4a8fdc209ac13141a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scenesAssets:
-  - {fileID: 102900000, guid: ecf48e93f94c05341994d4de921fa7cd, type: 3}
-  - {fileID: 102900000, guid: b9a7d7f99276dd04bb0aec932e836d43, type: 3}
-  - {fileID: 102900000, guid: e87379298dfa1a7488f6f881947b9e40, type: 3}
-  - {fileID: 102900000, guid: ffb58a07e45c2a7498f4ab3a893575bf, type: 3}
 --- !u!1 &175381611
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +385,7 @@ GameObject:
   - component: {fileID: 316923082}
   - component: {fileID: 316923083}
   m_Layer: 0
-  m_Name: 'Scatch [DELETE LATER]'
+  m_Name: 'Sketch [DELETE LATER]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
