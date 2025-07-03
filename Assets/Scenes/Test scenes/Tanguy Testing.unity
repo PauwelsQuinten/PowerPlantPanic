@@ -138,30 +138,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-      propertyPath: Responses.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-      propertyPath: Responses.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-      propertyPath: Responses.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418606777079147112, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-      propertyPath: Responses.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1784073696290054026, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 845.98
@@ -210,9 +186,7 @@ PrefabInstance:
       propertyPath: _ui
       value: 
       objectReference: {fileID: 1182998441}
-    m_RemovedComponents:
-    - {fileID: 15325513086521114, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-    - {fileID: 825647921641117398, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -268,10 +242,6 @@ PrefabInstance:
     - target: {fileID: 7137866149891071014, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7994807786281305073, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
-      propertyPath: _movingSpeed
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -692,6 +662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerRegulaterMiniGame
       objectReference: {fileID: 0}
+    - target: {fileID: 8340582975977306163, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -921,42 +895,6 @@ PrefabInstance:
       propertyPath: '_miniGameTriggers.Array.data[0]'
       value: 
       objectReference: {fileID: 1972158444}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Events.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: 'Events.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Responses.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1897193563}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EnableTurbinTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MiniGameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2790651065910495569, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-      propertyPath: Responses.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3643535384788471024, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
       propertyPath: m_Name
       value: MiniGameManager
@@ -1267,17 +1205,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 760001858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1897193563 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1782859304227366780, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
-  m_PrefabInstance: {fileID: 1700853215}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a48d9b91f6d2d148b07a74833d15991, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1954072864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1326,17 +1253,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -120.256
       objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: '_enableMiniGame.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
     - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: m_Name
       value: CentralControlPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
