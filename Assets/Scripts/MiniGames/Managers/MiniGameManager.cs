@@ -28,6 +28,16 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
+    public void EnableWasteControlTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "WasteControlTrigger") continue;
+            go.SetActive(!go.activeSelf);
+            return;
+        }
+    }
+
     public void StartMiniGame(Component sender, object obj)
     {
         _currentMiniGame = obj as IMiniGame;

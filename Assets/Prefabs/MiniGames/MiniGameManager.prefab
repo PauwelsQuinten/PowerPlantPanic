@@ -48,6 +48,7 @@ MonoBehaviour:
   _miniGameTriggers:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &2790651065910495569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +65,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ffb528170a07c3e43bf398d59066482f, type: 2}
   - {fileID: 11400000, guid: 1bc734a01b73f38498bb9520cb39928c, type: 2}
   - {fileID: 11400000, guid: df7a541e4ba265b46bb5325019cc54aa, type: 2}
+  - {fileID: 11400000, guid: 06df464ca9a2550489bd1fbf9b963f02, type: 2}
   Responses:
   - m_PersistentCalls:
       m_Calls:
@@ -98,6 +100,20 @@ MonoBehaviour:
       - m_Target: {fileID: 1782859304227366780}
         m_TargetAssemblyTypeName: MiniGameManager, Assembly-CSharp
         m_MethodName: EnablePressureControlTrigger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1782859304227366780}
+        m_TargetAssemblyTypeName: MiniGameManager, Assembly-CSharp
+        m_MethodName: EnableWasteControlTrigger
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

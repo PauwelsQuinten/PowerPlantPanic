@@ -208,6 +208,12 @@ public class CentralControlPanel : MonoBehaviour
                 _pipePSI = 150;
                 _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = _pipePSI });
                 break;
+            case MiniGame.WasteManagement:
+                StopCoroutine(_accumulateWaste);
+                _canAccumulateWaste = false;
+                _wasteTimer = 100;
+                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = _wasteTimer });
+                break;
         }
     }
 
