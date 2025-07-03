@@ -29,6 +29,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     }
     private void SpawnBarrel()
     {
+        if (_spawnedBarrel != null) return;
         GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
         _spawnedBarrel = go;
     }
@@ -51,6 +52,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         if (sender.transform.parent.gameObject.transform.parent.gameObject != gameObject) return;
         if (_heldItem == null) return;
         Destroy(_heldItem);
+        _spawnedBarrel = null;
         completed();
     }
 }

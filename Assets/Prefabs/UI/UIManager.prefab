@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1784073696290054026}
   - component: {fileID: 5359515142040932428}
+  - component: {fileID: 2320283844131842775}
   - component: {fileID: 6980723673616064319}
+  - component: {fileID: 3567837852882869339}
   - component: {fileID: 1418606777079147112}
+  - component: {fileID: 642703184053148743}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -46,6 +49,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba97f6f749dbbf2439f208d6cfd36a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2320283844131842775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f0b1e759501fb458498882d672a84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseMenu: {fileID: 0}
+  _pauseButton:
+    m_Name: Pause Button
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cdbb1bdb-eeff-477e-bb5a-7c9d04a77d89
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2821ff21-3b4b-464e-8eb4-42a37d804e9c
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pause Button
+      m_Flags: 0
+    m_Flags: 0
 --- !u!114 &6980723673616064319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +92,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ui: {fileID: 0}
+--- !u!114 &3567837852882869339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7398ea1df9deb543bc8279722d30a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ui: {fileID: 0}
+  _powerEfficiency: {fileID: 0}
+  _fanRPM: {fileID: 0}
+  _pressureNeedle: {fileID: 0}
+  _wasteLight: {fileID: 0}
+  _gameLost: {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
 --- !u!114 &1418606777079147112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +130,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 962fcb3f1198e6f428f2cd487339794d, type: 2}
   - {fileID: 11400000, guid: 7564ef4e33beb4f40b9fc6ea11844c44, type: 2}
   - {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
+  - {fileID: 11400000, guid: 00d5ecc1dee2e4f449c1169d840a77f2, type: 2}
+  - {fileID: 11400000, guid: e8b00010fd4fbcc4b85ba82d403239be, type: 2}
   Responses:
   - m_PersistentCalls:
       m_Calls:
@@ -96,7 +149,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3567837852882869339}
         m_TargetAssemblyTypeName: ControlPanelUI, Assembly-CSharp
         m_MethodName: PowerEfficiencyChanged
         m_Mode: 0
@@ -110,7 +163,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3567837852882869339}
         m_TargetAssemblyTypeName: ControlPanelUI, Assembly-CSharp
         m_MethodName: EnableUi
         m_Mode: 0
@@ -122,7 +175,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2320283844131842775}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: CanPause
         m_Mode: 0
@@ -136,7 +189,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3567837852882869339}
         m_TargetAssemblyTypeName: ControlPanelUI, Assembly-CSharp
         m_MethodName: PipePressureChanged
         m_Mode: 0
@@ -150,7 +203,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3567837852882869339}
         m_TargetAssemblyTypeName: ControlPanelUI, Assembly-CSharp
         m_MethodName: FanRPMChanged
         m_Mode: 0
@@ -164,7 +217,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3567837852882869339}
         m_TargetAssemblyTypeName: ControlPanelUI, Assembly-CSharp
         m_MethodName: WasteTimerChanged
         m_Mode: 0
@@ -190,3 +243,56 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 642703184053148743}
+        m_TargetAssemblyTypeName: PressureControlUI, Assembly-CSharp
+        m_MethodName: EnableUI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2320283844131842775}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: CanPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 642703184053148743}
+        m_TargetAssemblyTypeName: PressureControlUI, Assembly-CSharp
+        m_MethodName: ValveRotationChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &642703184053148743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b4c5b502fff2949a5363064352b312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ui: {fileID: 0}

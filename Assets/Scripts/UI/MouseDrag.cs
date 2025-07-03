@@ -18,7 +18,7 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
         {
             _timer += Time.deltaTime;
 
-            if (_timer > 2f)
+            if (_timer > 1.5f)
             {
                this.gameObject.GetComponent<Image>().enabled = false;
                 _timer = 0;

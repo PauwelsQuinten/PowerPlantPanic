@@ -26,7 +26,6 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
 
     private GameObject _brokenPipe;
     private int _currentBrokenPipeIndex;
-    private Coroutine _checkForMouseInput;
 
     private GameObject _activeValve;
     private GameObject _heldItem;
@@ -123,11 +122,24 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     public void completed()
     {
         _miniGameStarted = false;
+        _valveProgress = 0;
+        _valveIsOpen = true;
+        _isCarryingPipe = false;
+        _itemPlaced = false;
+        _valveLocked = false;
+        _pipeRemoved = false;
         _miniGameFinished.Raise(this, new MiniGameFinishedEventArgs{ FinishedMiniGame = MiniGame.PipeBroke});
     }
 
     public void failed()
     {
+        _miniGameStarted = false;
+        _valveProgress = 0;
+        _valveIsOpen = true;
+        _isCarryingPipe = false;
+        _itemPlaced = false;
+        _valveLocked = false;
+        _pipeRemoved = false;
         _miniGameStarted = false;
     }
 
@@ -164,21 +176,21 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
                 if (_activeValve.tag != "Red") break;
                 if (_valveLocked) break;
                 if (_valveIsOpen) _valveProgress += 40 * Time.deltaTime;
-                else if (!_valveIsOpen && _pipeRemoved) _valveProgress -= 40 * Time.deltaTime;
+                else if (!_valveIsOpen && _itemPlaced) _valveProgress -= 40 * Time.deltaTime;
                 _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
                 break;
             case 1:
                 if (_activeValve.tag != "Green") break;
                 if (_valveLocked) break;
                 if (_valveIsOpen) _valveProgress += 40 * Time.deltaTime;
-                else if (!_valveIsOpen && _pipeRemoved) _valveProgress -= 40 * Time.deltaTime;
+                else if (!_valveIsOpen && _itemPlaced) _valveProgress -= 40 * Time.deltaTime;
                 _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
                 break;
             case 2:
                 if (_activeValve.tag != "Blue") break;
                 if (_valveLocked) break;
                 if (_valveIsOpen) _valveProgress += 40 * Time.deltaTime;
-                else if (!_valveIsOpen && _pipeRemoved) _valveProgress -= 40 * Time.deltaTime;
+                else if (!_valveIsOpen && _itemPlaced) _valveProgress -= 40 * Time.deltaTime;
                 _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
                 break;
         }

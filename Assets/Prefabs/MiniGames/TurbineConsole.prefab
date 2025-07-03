@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e874cb97b33bd2479e6487831864764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turbineScreen: {fileID: 5262189638785600726, guid: 71d8fccb5ce065d49a7db47ea5c35782, type: 3}
+  turbineScreen: {fileID: 0}
   turbinCleared: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
 --- !u!1 &2193800747523139213
 GameObject:
@@ -425,7 +425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Name
-      value: TurbinTriggger
+      value: TurbineTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457386082826074389, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: _interact

@@ -62,7 +62,6 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _updateProgress = false;
         _yStartPoints.Clear();
         _yfinishPoints.Clear();
-        _disableTrigger.Raise(this, EventArgs.Empty);
         foreach (Image image in _lights)
         {
             image.color = Color.green;

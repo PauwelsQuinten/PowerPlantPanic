@@ -15,6 +15,8 @@ public class CentralControlPanel : MonoBehaviour
     [SerializeField]
     private List<GameEvent> _enableMiniGame = new List<GameEvent>();
     [SerializeField]
+    private List<GameEvent> _disableMiniGame = new List<GameEvent>();
+    [SerializeField]
     private GameEvent _powerEfficiencyChanged;
     [SerializeField]
     private GameEvent _fanRPMChanged;
@@ -60,9 +62,33 @@ public class CentralControlPanel : MonoBehaviour
     private bool _canDecreasePipePressure = false;
     private bool _canAccumulateWaste = false;
 
+    private List<bool> _isMinigameEnabled = new List<bool>();
 
     private void Start()
     {
+        foreach (GameEvent minigame in _enableMiniGame)
+        {
+            _isMinigameEnabled.Add(false);
+        }
+
+        int index = UnityEngine.Random.Range(0, _enableMiniGame.Count);
+
+        if (_enableMiniGame.Count > 1)
+        {
+            while (index == _lastEnabledMiniGame)
+            {
+                index = UnityEngine.Random.Range(0, _enableMiniGame.Count);
+            }
+        }
+
+        if (index != _lastEnabledMiniGame)
+        {
+            _isMinigameEnabled[index] = true;
+            _enableMiniGame[(int)index].Raise(this, EventArgs.Empty);
+        }
+
+        _lastEnabledMiniGame = index;
+
         StartCoroutine(SelectRandomMiniGame());
     }
 
@@ -77,14 +103,17 @@ public class CentralControlPanel : MonoBehaviour
 
             if(_enableMiniGame.Count > 1)
             {
-                while (index == _lastEnabledMiniGame)
+                while (index == _lastEnabledMiniGame || _isMinigameEnabled[index])
                 {
                     index = UnityEngine.Random.Range(0, _enableMiniGame.Count);
                 }
             }
 
-            if(index != _lastEnabledMiniGame) 
-                _enableMiniGame[(int)index].Raise(this, EventArgs.Empty);
+            if(index != _lastEnabledMiniGame)
+            {
+                _isMinigameEnabled[index] = true;
+                _enableMiniGame[index].Raise(this, EventArgs.Empty);
+            }
 
             _lastEnabledMiniGame = index;
         }
@@ -194,25 +223,33 @@ public class CentralControlPanel : MonoBehaviour
                 StopCoroutine(_decreaseOutputEfficiency);
                 _canDecreasePower = false;
                 _powerEfficiency = 100;
+                _isMinigameEnabled[0] = false;
                 _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = _powerEfficiency });
+                _disableMiniGame[0].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.FanBlock:
                 StopCoroutine(_decreaseFanRPM);
                 _canDecreaseFanRPM = false;
                 _fanRPM = 3600;
+                _isMinigameEnabled[2] = false;
                 _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = _fanRPM });
+                _disableMiniGame[2].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.PipeBroke:
                 StopCoroutine(_decreasePipePressure);
                 _canDecreasePipePressure = false;
                 _pipePSI = 150;
+                _isMinigameEnabled[1] = false;
                 _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = _pipePSI });
+                _disableMiniGame[1].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.WasteManagement:
                 StopCoroutine(_accumulateWaste);
                 _canAccumulateWaste = false;
                 _wasteTimer = 100;
+                _isMinigameEnabled[3] = false;
                 _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = _wasteTimer });
+                _disableMiniGame[3].Raise(this, EventArgs.Empty);
                 break;
         }
     }

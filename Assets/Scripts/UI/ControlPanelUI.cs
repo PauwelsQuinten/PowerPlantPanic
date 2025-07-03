@@ -59,6 +59,8 @@ public class ControlPanelUI : MonoBehaviour
         if (_wasteLight.color == Color.white)
             _wasteLight.color = Color.red;
         else _wasteLight.color = Color.white;
+
+        if(args.WasteTimer == 100) _wasteLight.color = Color.white;
     }
 
     public void GiveUp()

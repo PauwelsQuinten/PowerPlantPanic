@@ -18,18 +18,16 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
-    public void EnableTurbinTrigger(Component sender, object obj)
+    public void EnableTurbineTrigger(Component sender, object obj)
     {
         foreach (GameObject go in _miniGameTriggers)
         {
-            if (go.name != "TurbinTrigger") continue;
-            
-            
+            if (go.name != "TurbineTrigger") continue;
             go.SetActive(!go.activeSelf);
             return;
             
         }
-     }
+    }
 
     public void EnablePressureControlTrigger(Component sender, object obj)
     {
@@ -46,8 +44,50 @@ public class MiniGameManager : MonoBehaviour
     {
         foreach (GameObject go in _miniGameTriggers)
         {
-            if (go.name != "WasteControlTrigger") continue;
+            if (go.name != "WasteConsoleTrigger") continue;
             go.SetActive(!go.activeSelf);
+            return;
+        }
+    }
+
+    public void DisableOutputTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "OutputTrigger") continue;
+            go.SetActive(false);
+            return;
+        }
+    }
+
+    public void DisableTurbineTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "TurbineTrigger") continue;
+            go.SetActive(false);
+            return;
+
+        }
+    }
+
+    public void DisablePressureControlTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "PressureControlTrigger") continue;
+
+            go.SetActive(false);
+            return;
+        }
+    }
+
+    public void DisableWasteControlTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "WasteConsoleTrigger") continue;
+            go.SetActive(false);
             return;
         }
     }
