@@ -10,6 +10,7 @@ public enum MiniGame
 {
     PowerRegulating,
     FanBlock,
-    PiperBroke,
+    PipeBroke
+
 }
 
