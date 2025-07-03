@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
@@ -19,8 +20,9 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
             if (_timer > 2f)
             {
-               this.gameObject.SetActive(false);
+               this.gameObject.GetComponent<Image>().enabled = false;
                 _timer = 0;
+                _enteredGarbage = false;
             }
         }
     }

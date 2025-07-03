@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting;
+using UnityEngine.UI;
 
 public class PowerTurbin : MonoBehaviour, IMiniGame
 {
@@ -9,14 +10,24 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     private GameObject turbineScreen;
     [SerializeField]
     private GameEvent turbinCleared;
-    [SerializeField]
-    public List<GameObject> garbagePositions;
 
-    private GameObject[] _garbageList;
+
+    private List<GameObject> garbagePositions = new List<GameObject>();
+    private GameObject[] _garbageList = new GameObject[] { };
     private GarbageCollection _garbadgeCollection;
 
     private void Start()
     {
+        Transform[] allObjects = turbineScreen.GetComponentsInChildren<Transform>();
+
+        foreach (Transform trans in allObjects)
+        {
+            if (trans.gameObject.name.StartsWith("Position"))
+            {
+                garbagePositions.Add(trans.gameObject);
+            }
+        }
+
         _garbadgeCollection = turbineScreen.GetComponentInChildren<GarbageCollection>();
 
         //Subscribe here on the garbage collector event
@@ -49,27 +60,28 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
 
     IEnumerator DelayedUIClose()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
         completed();
     }
 
     private void SetGarabageLocation()
     {
-        //Check if there are enough positions 
+        _garbageList = GameObject.FindGameObjectsWithTag("Garbage");
+
+        //Check if there are enough positions
         if (garbagePositions.Count != _garbageList.Length)
         {
             Debug.Log("Not enough positions for all garbage to be positioned!");
             return;
         }
 
-        _garbageList = GameObject.FindGameObjectsWithTag("Garbage");
-
         int garbageIndex = 0;
         foreach (var garbage in _garbageList)
         {
             garbage.transform.position = garbagePositions[garbageIndex].transform.position;
-            garbage.SetActive(true);
+            garbageIndex++;
+            garbage.GetComponent<Image>().enabled = true;
         }
     }
 }

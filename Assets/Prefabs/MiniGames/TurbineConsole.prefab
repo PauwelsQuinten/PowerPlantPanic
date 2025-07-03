@@ -138,8 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turbineScreen: {fileID: 5262189638785600726, guid: 71d8fccb5ce065d49a7db47ea5c35782, type: 3}
   turbinCleared: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
-  garbagePositions:
-  - {fileID: 0}
 --- !u!1 &2193800747523139213
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,20 +18,16 @@ public class GarbageCollection : MonoBehaviour
        _totalGarbage = GameObject.FindGameObjectsWithTag(garbageTag).Length;
     }
 
-
-    private void Update()
-    {
-        if (_removedGarbage >= _totalGarbage)
-        {
-            RemoveAllGarbage.Invoke();
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag != garbageTag) return;
 
-
         _removedGarbage++; // add 1 to the totale count 
+
+        if (_removedGarbage >= _totalGarbage)
+        {
+            RemoveAllGarbage.Invoke();
+            _removedGarbage = 0;
+        }
     }
 }
