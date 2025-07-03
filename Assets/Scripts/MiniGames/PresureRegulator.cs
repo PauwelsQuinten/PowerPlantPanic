@@ -32,16 +32,12 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private GameObject _heldItem;
 
     private float _valveProgress = 0;
-
     private bool _valveIsOpen = true;
-
     private bool _isCarryingPipe = false;
-
     private bool _itemPlaced = false;
-
     private bool _valveLocked = false;
-
     private bool _miniGameStarted = false;
+    private bool _pipeRemoved = false;
 
     private void SetRandomBrokenPipe()
     {
@@ -77,6 +73,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
 
         if (pipeHolderTag != _brokenPipe.tag) return;
         if (_valveIsOpen) return;
+        _pipeRemoved = true;
         _isCarryingPipe = true;
         _heldItem = _brokenPipe;
         _brokenPipe.transform.parent = _itemHolder.transform;
@@ -88,6 +85,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     {
         if (_heldItem.tag != tag) return;
         if (_brokenPipe != null) return;
+        if (!_pipeRemoved) return;
 
         _heldItem.transform.parent = holder.transform;
         _heldItem.transform.localPosition = Vector3.zero;
@@ -116,6 +114,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
 
     public void TrashItem(Component sender, object obj)
     {
+        if (sender.transform.parent.gameObject.transform.parent.gameObject != gameObject) return;
         if (_heldItem == null) return;
 
         Destroy(_heldItem.gameObject);
@@ -165,24 +164,28 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
                 if (_activeValve.tag != "Red") break;
                 if (_valveLocked) break;
                 if (_valveIsOpen) _valveProgress += 40 * Time.deltaTime;
-                else _valveProgress -= 40 * Time.deltaTime;
+                else if (!_valveIsOpen && _pipeRemoved) _valveProgress -= 40 * Time.deltaTime;
+                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
                 break;
             case 1:
                 if (_activeValve.tag != "Green") break;
                 if (_valveLocked) break;
                 if (_valveIsOpen) _valveProgress += 40 * Time.deltaTime;
-                else _valveProgress -= 40 * Time.deltaTime;
+                else if (!_valveIsOpen && _pipeRemoved) _valveProgress -= 40 * Time.deltaTime;
+                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
                 break;
             case 2:
                 if (_activeValve.tag != "Blue") break;
                 if (_valveLocked) break;
                 if (_valveIsOpen) _valveProgress += 40 * Time.deltaTime;
-                else _valveProgress -= 40 * Time.deltaTime;
+                else if (!_valveIsOpen && _pipeRemoved) _valveProgress -= 40 * Time.deltaTime;
+                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
                 break;
         }
 
         if (_valveProgress > 180)
         {
+            _valveProgress = 180;
             _valveIsOpen = false;
             _valveLocked = true;
         }
@@ -190,12 +193,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
 
         if (_valveProgress < 0)
         {
+            _valveProgress = 0;
             _valveIsOpen = true;
             _valveLocked = true;
 
             completed();
         }
-
-        _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
     }
 }
