@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Garbadge
+  - Garbage
+  - Red
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX
