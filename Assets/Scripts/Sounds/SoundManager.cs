@@ -5,8 +5,8 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    private AudioSource _sfxSource; //For sound effects
-    private AudioSource _musicSource; //For background music
+    public AudioSource SfxSource { get; private set; } //For sound effects
+    public AudioSource MusicSource { get; private set; } //For background music
     private Dictionary<string, AudioClip> _soundClips;
 
     private void Awake()
@@ -23,9 +23,9 @@ public class SoundManager : MonoBehaviour
         }
 
         //Initialize audio
-        _sfxSource = gameObject.AddComponent<AudioSource>();
-        _musicSource = gameObject.AddComponent<AudioSource>();
-        _musicSource.enabled = true;
+        SfxSource = gameObject.AddComponent<AudioSource>();
+        MusicSource = gameObject.AddComponent<AudioSource>();
+        MusicSource.enabled = true;
         _soundClips = new Dictionary<string, AudioClip>();
     }
 
@@ -63,7 +63,7 @@ public class SoundManager : MonoBehaviour
     {
         if (_soundClips.ContainsKey(name))
         {
-            _sfxSource.PlayOneShot(_soundClips[name]);
+            SfxSource.PlayOneShot(_soundClips[name]);
         }
         else
         {
@@ -76,8 +76,8 @@ public class SoundManager : MonoBehaviour
     {
         if (_soundClips.ContainsKey(name))
         {
-            _musicSource.clip = _soundClips[name];
-            _musicSource.Play();
+            MusicSource.clip = _soundClips[name];
+            MusicSource.Play();
         }
         else
         {
@@ -88,24 +88,24 @@ public class SoundManager : MonoBehaviour
     // Stop all sound effects
     public void StopSound()
     {
-        _sfxSource.Stop();
+        SfxSource.Stop();
     }
 
     // Stop background music
     public void StopMusic()
     {
-        _musicSource.Stop();
+        MusicSource.Stop();
     }
 
     // Set volume for sound effects
     public void SetSFXVolume(float volume)
     {
-        _sfxSource.volume = Mathf.Clamp01(volume);
+        SfxSource.volume = Mathf.Clamp01(volume);
     }
 
     // Set volume for background music
     public void SetMusicVolume(float volume)
     {
-        _musicSource.volume = Mathf.Clamp01(volume);
+        MusicSource.volume = Mathf.Clamp01(volume);
     }
 }

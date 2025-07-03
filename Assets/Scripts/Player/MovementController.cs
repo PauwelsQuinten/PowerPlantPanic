@@ -1,3 +1,4 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rigidbody2D;
@@ -12,7 +13,12 @@ public class MovementController : MonoBehaviour
     private Animator _bodyAnim, _handsAnim;
     [SerializeField] 
     private InputAction _moveDirection;
+    [SerializeField]
+    private AudioClip _runningSound;
+    [SerializeField]
+    private SoundManager _soundManager;
 
+    private Vector2 _lastPosition, _velocity;
 
 
     private SlideMovement _sMove;
@@ -31,6 +37,10 @@ public class MovementController : MonoBehaviour
     {
         _sMove.startPosition = new Vector2(0,0);
         _sMove.maxIterations = 20;
+
+        _lastPosition = transform.position;
+
+        _soundManager.LoadSoundWithOutPath("walking", _runningSound);
     }
 
     private void Update()
@@ -61,6 +71,26 @@ public class MovementController : MonoBehaviour
             float angle = Mathf.LerpAngle(currentAngle, targetAngle, _rotatingSpeed * Time.deltaTime);
             
             transform.rotation = Quaternion.Euler(0,0, angle);
+        }
+
+        //Small velocity calculation -- Nothing to worry about
+        Vector2  currentPosition = transform.position;
+        _velocity = (currentPosition - _lastPosition) / Time.deltaTime;
+        _lastPosition = currentPosition;
+
+        PlayerSound();
+    }
+
+
+    private void PlayerSound()
+    {
+        if (_velocity == Vector2.zero)
+        {
+            _soundManager.StopSound();
+        }
+        if (_velocity != Vector2.zero && !_soundManager.SfxSource.isPlaying)
+        {
+            _soundManager.PlaySound("walking");
         }
     }
 }
