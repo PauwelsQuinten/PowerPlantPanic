@@ -18,11 +18,25 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
+    public void EnableTurbinTrigger(Component sender, object obj)
+    {
+        foreach (GameObject go in _miniGameTriggers)
+        {
+            if (go.name != "TurbinTrigger") continue;
+            
+            
+            go.SetActive(!go.activeSelf);
+            return;
+            
+        }
+     }
+
     public void EnablePressureControlTrigger(Component sender, object obj)
     {
         foreach (GameObject go in _miniGameTriggers)
         {
             if (go.name != "PressureControlTrigger") continue;
+
             go.SetActive(!go.activeSelf);
             return;
         }
