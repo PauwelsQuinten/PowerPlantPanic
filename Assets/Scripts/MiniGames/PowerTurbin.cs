@@ -1,5 +1,7 @@
-using UnityEditor;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting;
 
 public class PowerTurbin : MonoBehaviour, IMiniGame
 {
@@ -8,18 +10,22 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameEvent turbinCleared;
     [SerializeField]
-    private GarbadgeCollection garbadgeCollection;
-    
+    public List<GameObject> garbagePositions;
+
+    private GameObject[] _garbageList;
+    private GarbageCollection _garbadgeCollection;
 
     private void Start()
     {
+        _garbadgeCollection = turbineScreen.GetComponentInChildren<GarbageCollection>();
+
         //Subscribe here on the garbage collector event
-        garbadgeCollection.RemoveAllGarbage.AddListener(OnAllGarbadgeRemoved);
+        _garbadgeCollection.RemoveAllGarbage.AddListener(OnAllGarbadgeRemoved);
     }
 
     public void OnAllGarbadgeRemoved()
     {
-        completed();
+        StartCoroutine(DelayedUIClose());
     }
 
     public void completed()
@@ -37,11 +43,33 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     {
         turbineScreen.SetActive(true);
 
-        GameObject[] pile = GameObject.FindGameObjectsWithTag("Garbage");
+        //Make garbage visible and put it on the right location
+        SetGarabageLocation();
+    }
 
-        foreach (var trash in pile)
+    IEnumerator DelayedUIClose()
+    {
+        yield return new WaitForSeconds(5f);
+
+        completed();
+    }
+
+    private void SetGarabageLocation()
+    {
+        //Check if there are enough positions 
+        if (garbagePositions.Count != _garbageList.Length)
         {
-            trash.SetActive(true);
+            Debug.Log("Not enough positions for all garbage to be positioned!");
+            return;
+        }
+
+        _garbageList = GameObject.FindGameObjectsWithTag("Garbage");
+
+        int garbageIndex = 0;
+        foreach (var garbage in _garbageList)
+        {
+            garbage.transform.position = garbagePositions[garbageIndex].transform.position;
+            garbage.SetActive(true);
         }
     }
 }

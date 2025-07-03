@@ -4,7 +4,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GarbadgeCollection : MonoBehaviour
+public class GarbageCollection : MonoBehaviour
 {
     [Tooltip("Fill in Garbage as tag")]
     [SerializeField]
@@ -30,6 +30,7 @@ public class GarbadgeCollection : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag != garbageTag) return;
+
 
         _removedGarbage++; // add 1 to the totale count 
     }

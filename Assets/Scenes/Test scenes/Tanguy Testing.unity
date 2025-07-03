@@ -1306,34 +1306,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 35714859452529815, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
-      propertyPath: m_Name
-      value: TurbinTriggger
-      objectReference: {fileID: 0}
     - target: {fileID: 477960339113146955, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
       propertyPath: m_Name
       value: TurbineConsole
       objectReference: {fileID: 0}
-    - target: {fileID: 933581892527196253, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
-      propertyPath: m_Size.y
-      value: 1.3416901
-      objectReference: {fileID: 0}
-    - target: {fileID: 933581892527196253, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 933581892527196253, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.7480123
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781607751998872788, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
-      propertyPath: garbageTag
-      value: Garbadge
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781607751998872788, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
-      propertyPath: turbinCleared
-      value: 
-      objectReference: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
     - target: {fileID: 4781607751998872788, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
       propertyPath: turbineScreen
       value: 
@@ -1481,7 +1457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5262189638785600726, guid: 71d8fccb5ce065d49a7db47ea5c35782, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
