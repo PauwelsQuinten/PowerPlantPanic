@@ -13,8 +13,6 @@ public class MovementController : MonoBehaviour
     [SerializeField] 
     private InputAction _moveDirection;
 
-
-
     private SlideMovement _sMove;
 
     private void OnEnable()
