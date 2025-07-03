@@ -314,7 +314,7 @@ MonoBehaviour:
   _minigamesInterval: 5
   _errorRate: 2
   _enableMiniGame:
-  - {fileID: 11400000, guid: 1bc734a01b73f38498bb9520cb39928c, type: 2}
+  - {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
   _powerEfficiencyChanged: {fileID: 11400000, guid: 01d4f73f48f7fbd4599c6a71a9699742, type: 2}
   _fanRPMChanged: {fileID: 11400000, guid: 962fcb3f1198e6f428f2cd487339794d, type: 2}
   _pipePressureChanged: {fileID: 11400000, guid: 1a5d941dd9215fd4cb2b185060044828, type: 2}

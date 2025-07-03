@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 76266570230901813}
-  _movingSpeed: 5
+  _movingSpeed: 3
   _rotatingSpeed: 5
   _bodyAnim: {fileID: 3719500184469873988}
   _handsAnim: {fileID: 7256123354750154405}
