@@ -20,9 +20,9 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
             if (_timer > 1.5f)
             {
-               this.gameObject.GetComponent<Image>().enabled = false;
                 _timer = 0;
                 _enteredGarbage = false;
+                this.gameObject.GetComponent<Image>().enabled = false;
             }
         }
     }
@@ -40,5 +40,13 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     private void OnTriggerStay2D(Collider2D other)
     {
         _enteredGarbage = true;
+    }
+
+    private void OnEnable()
+    {
+        _timer = 0;
+        _enteredGarbage = false;
+        _onObject = false;
+        _clicked = false;
     }
 }

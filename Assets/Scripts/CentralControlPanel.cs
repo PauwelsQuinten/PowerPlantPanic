@@ -64,6 +64,7 @@ public class CentralControlPanel : MonoBehaviour
 
     private List<bool> _isMinigameEnabled = new List<bool>();
 
+    private int _activeMiniGames;
     private void Start()
     {
         foreach (GameEvent minigame in _enableMiniGame)
@@ -85,6 +86,7 @@ public class CentralControlPanel : MonoBehaviour
         {
             _isMinigameEnabled[index] = true;
             _enableMiniGame[(int)index].Raise(this, EventArgs.Empty);
+            _activeMiniGames += 1;
         }
 
         _lastEnabledMiniGame = index;
@@ -97,7 +99,7 @@ public class CentralControlPanel : MonoBehaviour
         yield return new WaitForSeconds(_minigamesInterval);
         int spawnError = UnityEngine.Random.Range(1, _errorRate + 1);
 
-        if (spawnError == 2)
+        if (spawnError == 2 && _activeMiniGames != 4)
         {
             int index = UnityEngine.Random.Range(0, _enableMiniGame.Count);
 
@@ -113,6 +115,7 @@ public class CentralControlPanel : MonoBehaviour
             {
                 _isMinigameEnabled[index] = true;
                 _enableMiniGame[index].Raise(this, EventArgs.Empty);
+                _activeMiniGames += 1;
             }
 
             _lastEnabledMiniGame = index;
@@ -252,6 +255,7 @@ public class CentralControlPanel : MonoBehaviour
                 _disableMiniGame[3].Raise(this, EventArgs.Empty);
                 break;
         }
+        _activeMiniGames -= 1;
     }
 
     private void Update()

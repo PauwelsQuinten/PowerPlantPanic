@@ -90,8 +90,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _heldItem.transform.localPosition = Vector3.zero;
         _heldItem.transform.localEulerAngles = new Vector3(0, 0, 0);
 
+        _pipes[_currentBrokenPipeIndex] = _heldItem;
         _heldItem = null;
-        _pipes.Insert(_currentBrokenPipeIndex, _heldItem);
         _itemPlaced = true;
     }
 
@@ -128,6 +128,10 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _itemPlaced = false;
         _valveLocked = false;
         _pipeRemoved = false;
+        _heldItem = null;
+        _activeValve = null;
+        _brokenPipe = null;
+        _currentBrokenPipeIndex = -1;
         _miniGameFinished.Raise(this, new MiniGameFinishedEventArgs{ FinishedMiniGame = MiniGame.PipeBroke});
     }
 
@@ -141,6 +145,10 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _valveLocked = false;
         _pipeRemoved = false;
         _miniGameStarted = false;
+        _heldItem = null;
+        _activeValve = null;
+        _brokenPipe = null;
+        _currentBrokenPipeIndex = -1;
     }
 
     public void GetActiveValve(Component sender, object obj)
