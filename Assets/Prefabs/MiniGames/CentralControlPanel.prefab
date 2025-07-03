@@ -322,7 +322,7 @@ MonoBehaviour:
   _closePanel: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _gameLost: {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
   _powerDrainAmount: 1
-  _pressureDrainAmount: 10
+  _pressureDrainAmount: 1
   _RPMDrainAmount: 1
   _accumulateWasteAmount: 1
   _powerDrainSpeed: 0.5
