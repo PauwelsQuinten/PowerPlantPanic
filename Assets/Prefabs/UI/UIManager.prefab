@@ -110,6 +110,7 @@ MonoBehaviour:
   _pressureNeedle: {fileID: 0}
   _wasteLight: {fileID: 0}
   _gameLost: {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
+  _ChangeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
 --- !u!114 &1418606777079147112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,3 +297,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ui: {fileID: 0}
+  _ChangeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}

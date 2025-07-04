@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 76266570230901813}
   - component: {fileID: 7994807786281305073}
   - component: {fileID: 4782660307683828923}
+  - component: {fileID: 7367686839030841559}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -328,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 76266570230901813}
-  _movingSpeed: 3
+  _movingSpeed: 6
   _rotatingSpeed: 10
   _bodyAnim: {fileID: 3719500184469873988}
   _handsAnim: {fileID: 7256123354750154405}
@@ -458,3 +459,32 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0013601697, y: 0.070707776}
   m_Size: {x: 1.2152344, y: 0.70396954}
   m_Direction: 1
+--- !u!114 &7367686839030841559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137866149891071014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beea91935ee6d2746a0a632c4f077ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Events:
+  - {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
+  Responses:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7994807786281305073}
+        m_TargetAssemblyTypeName: MovementController, Assembly-CSharp
+        m_MethodName: ChangeCanMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

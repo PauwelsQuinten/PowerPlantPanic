@@ -195,6 +195,8 @@ MonoBehaviour:
   _itemHolder: {fileID: 0}
   _barrelPrefab: {fileID: 1881064264273967037, guid: 6beb1d3cf0aae9f49bf91bd2e229fa30, type: 3}
   _barrelSpawnLocation: {fileID: 6119832128055125046}
+  _barrelPickUpTrigger: {fileID: 2667889121952905002}
+  _barrelPlaceTrigger: {fileID: 2976204963113806883}
   _minigameFinished: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
 --- !u!114 &415060747723909775
 MonoBehaviour:
@@ -332,7 +334,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Name
-      value: InteractionTriggger
+      value: placeTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457386082826074389, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: _interact
@@ -383,6 +389,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+--- !u!1 &2976204963113806883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+  m_PrefabInstance: {fileID: 14571910488459314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7798075671292220196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7785476439282817814, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
@@ -472,7 +483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Name
-      value: InteractionTriggger
+      value: PickUpTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457386082826074389, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: _interact
@@ -523,6 +538,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+--- !u!1 &2667889121952905002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+  m_PrefabInstance: {fileID: 898574447833486139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6950163776381093933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7785476439282817814, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
@@ -613,6 +633,10 @@ PrefabInstance:
     - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Name
       value: WasteConsoleTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457386082826074389, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: _interact

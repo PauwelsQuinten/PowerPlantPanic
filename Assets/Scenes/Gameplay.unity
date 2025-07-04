@@ -226,10 +226,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerRegulaterMiniGame
       objectReference: {fileID: 0}
-    - target: {fileID: 8340582975977306163, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -710,10 +706,6 @@ PrefabInstance:
     - target: {fileID: 7137866149891071014, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7994807786281305073, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
-      propertyPath: _movingSpeed
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1232,50 +1224,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.256
       objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: _RPMDrainAmount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: _powerDrainSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: _powerDrainAmount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: _minigamesInterval
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: _pressureDrainAmount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: _accumulateWasteAmount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: _disableMiniGame.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: '_disableMiniGame.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 456244d94da83d24f9a68a8c73c08901, type: 2}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: '_disableMiniGame.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 9f066744b6a436a4890baf621eeff6b2, type: 2}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: '_disableMiniGame.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 85ee1fe903280c8428551ee917f2d7c6, type: 2}
-    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
-      propertyPath: '_disableMiniGame.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 6725f6e3fe7097c42bdaa0ad1102841c, type: 2}
     - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: m_Name
       value: CentralControlPanel
@@ -1682,10 +1630,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 565896393061997385, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3439146099165815189, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.144
@@ -1756,10 +1700,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 856553218}
-    - target: {fileID: 1288579669211082605, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GiveUp
-      objectReference: {fileID: 0}
     - target: {fileID: 5441735291941885502, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1840,17 +1780,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5694598482758593287, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
-      propertyPath: m_Name
-      value: WasteLight
-      objectReference: {fileID: 0}
     - target: {fileID: 8771580069511527898, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
       propertyPath: m_Name
       value: ControlPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8771580069511527898, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1948,10 +1880,6 @@ PrefabInstance:
     - target: {fileID: 5262189638785600726, guid: 71d8fccb5ce065d49a7db47ea5c35782, type: 3}
       propertyPath: m_Name
       value: TurbinPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262189638785600726, guid: 71d8fccb5ce065d49a7db47ea5c35782, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2082,18 +2010,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 856553219}
-    - target: {fileID: 359403276431112055, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Credits
-      objectReference: {fileID: 0}
     - target: {fileID: 939476160073096956, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 856553219}
-    - target: {fileID: 939476160073096956, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 1617157045463979694, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2138,10 +2058,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 856553219}
-    - target: {fileID: 2554803791595706477, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -30,4 +30,11 @@ public class GarbageCollection : MonoBehaviour
             _removedGarbage = 0;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag != garbageTag) return;
+
+        _removedGarbage--; // add 1 to the totale count 
+    }
 }

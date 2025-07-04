@@ -5,11 +5,22 @@ public class PressureControlUI : MonoBehaviour
 {
     [SerializeField]
     private GameObject _ui;
-    public void EnableUI(Component sender, object obj)
+    [SerializeField]
+    private GameEvent _ChangeCanMove;
+
+    public void EnableUi(Component sender, object obj)
     {
         bool? setActive = obj as bool?;
-        if ((bool)setActive) _ui.SetActive(true);
-        else _ui.SetActive(false);
+        if ((bool)setActive)
+        {
+            _ui.SetActive(true);
+            _ChangeCanMove.Raise(this, false);
+        }
+        else
+        {
+            _ui.SetActive(false);
+            _ChangeCanMove.Raise(this, true);
+        }
     }
 
     public void ValveRotationChanged(Component sender, object obj)
