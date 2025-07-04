@@ -21,6 +21,17 @@ public class ControlPanelUI : MonoBehaviour
     [SerializeField]
     private GameEvent _ChangeCanMove;
 
+    [Header("Sound Variables")]
+    [SerializeField]
+    private AudioClip _explosionSound;
+    [SerializeField]
+    private SoundManager _soundManager;
+
+    private void Start()
+    {
+        _soundManager.LoadSoundWithOutPath("explosion", _explosionSound);
+    }
+
     public void EnableUi(Component sender, object obj)
     {
         bool? setActive = obj as bool?;
@@ -75,6 +86,8 @@ public class ControlPanelUI : MonoBehaviour
 
     public void GiveUp()
     {
+        _soundManager.PlaySound("explosion");
+
         _gameLost.Raise(this, EventArgs.Empty);
     }
 }

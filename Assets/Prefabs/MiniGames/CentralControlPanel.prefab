@@ -336,6 +336,8 @@ MonoBehaviour:
   _pressureDrainSpeed: 1
   _RPMDrainSpeed: 1
   _accumulateWasteSpeed: 1
+  _alarmSound: {fileID: 8300000, guid: 91466ac01e37e7e4ab77fe34e41bf55d, type: 3}
+  _soundManager: {fileID: 0}
 --- !u!114 &998721114786211185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,11 +456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6488558932981264165, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Size.y
-      value: 1.71
+      value: 3.3792553
       objectReference: {fileID: 0}
     - target: {fileID: -6488558932981264165, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Offset.y
-      value: -0.3
+      value: -1.6814532
       objectReference: {fileID: 0}
     - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Name

@@ -31,6 +31,12 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameEvent _changeCanWalk;
 
+    [Header("Sound Variables")]
+    [SerializeField]
+    private AudioClip _clickSound;
+    [SerializeField]
+    private SoundManager _soundManager;
+
     private List<int> _yStartPoints = new List<int>();
     private List<int> _yfinishPoints = new List<int>();
 
@@ -45,6 +51,12 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private float _timer;
 
     private bool _updateProgress;
+
+    private void Start()
+    {
+        _soundManager.LoadSoundWithOutPath("click", _clickSound);
+    }
+
     public void StartMiniGame(Component sender, object obj)
     {
         _updateProgress = true;
@@ -142,6 +154,9 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         {
             _completedSliders.Remove(randomSlider);
         }
+
+        //Click Sound Implementation
+        _soundManager.PlaySound("click");
     }
 
     private void CheckSolution()

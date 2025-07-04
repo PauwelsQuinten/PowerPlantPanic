@@ -15,8 +15,23 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameEvent _minigameFinished;
 
+    [Header("Audio Variables")]
+    [SerializeField]
+    private AudioClip _grabSound;
+    [SerializeField]
+    private AudioClip _placeSound;
+    [SerializeField]
+    private SoundManager _soundManager;
+
     private GameObject _heldItem;
     private GameObject _spawnedBarrel;
+
+    private void Start()
+    {
+        _soundManager.LoadSoundWithOutPath("grab", _grabSound);
+        _soundManager.LoadSoundWithOutPath("place", _placeSound);
+    }
+
     public void completed()
     {
         _minigameFinished.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement});
@@ -47,6 +62,9 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     public void PickUpBarrel(Component sender, object obj)
     {
         if (_heldItem != null) return;
+
+        _soundManager.PlaySound("grab");
+
         _heldItem = _spawnedBarrel;
         _heldItem.transform.parent = _itemHolder.transform;
         _heldItem.transform.localPosition = Vector3.zero;
@@ -58,6 +76,9 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     {
         if (sender.transform.parent.gameObject.transform.parent.gameObject != gameObject) return;
         if (_heldItem == null) return;
+
+        _soundManager.PlaySound("place");
+
         Destroy(_heldItem);
         _spawnedBarrel = null;
         _barrelPlaceTrigger.SetActive(false);
