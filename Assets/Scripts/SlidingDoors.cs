@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SlidingDoors : MonoBehaviour
 {
@@ -38,13 +39,13 @@ public class SlidingDoors : MonoBehaviour
 
     IEnumerator OpenDoors() 
     {
-        Vector2 leftDoorTargetPos = doorLeftPosition.position;
-        Vector2 currentLeftDoorPos = doorLeft.transform.position;
+        Vector3 leftDoorTargetPos = doorLeftPosition.position - transform.right * ((doorLeft.GetComponent<SpriteRenderer>().size.x / 2) * doorLeft.transform.localScale.x);
+        Vector3 currentLeftDoorPos = doorLeft.transform.position;
 
         while(Vector2.Distance(currentLeftDoorPos, leftDoorTargetPos) > 0.01f)
         {
             doorLeft.transform.position = Vector2.MoveTowards(doorLeft.transform.position, leftDoorTargetPos, doorSpeed * Time.deltaTime);
-            doorRight.transform.position = Vector2.MoveTowards(doorRight.transform.position, doorRightPosition.position, doorSpeed * Time.deltaTime);
+            doorRight.transform.position = Vector2.MoveTowards(doorRight.transform.position, doorRightPosition.position + transform.right * ((doorRight.GetComponent<SpriteRenderer>().size.x / 2) * doorRight.transform.localScale.x), doorSpeed * Time.deltaTime);
 
             yield return null;
         }
