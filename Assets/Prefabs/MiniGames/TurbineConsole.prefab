@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turbineScreen: {fileID: 0}
   turbinCleared: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
+  _changeCanWalk: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
 --- !u!1 &2193800747523139213
 GameObject:
   m_ObjectHideFlags: 0

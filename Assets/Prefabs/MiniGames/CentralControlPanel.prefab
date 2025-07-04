@@ -311,24 +311,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _openControlPanel: {fileID: 11400000, guid: 64702b8d56bf3e848b99b004111217ee, type: 2}
-  _minigamesInterval: 5
-  _errorRate: 2
+  _minigamesInterval: 10
   _enableMiniGame:
   - {fileID: 11400000, guid: 1bc734a01b73f38498bb9520cb39928c, type: 2}
   - {fileID: 11400000, guid: c17c77cc858e76a48b13dd12fcdbb350, type: 2}
   - {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
   - {fileID: 11400000, guid: 06df464ca9a2550489bd1fbf9b963f02, type: 2}
+  _disableMiniGame:
+  - {fileID: 11400000, guid: 456244d94da83d24f9a68a8c73c08901, type: 2}
+  - {fileID: 11400000, guid: 9f066744b6a436a4890baf621eeff6b2, type: 2}
+  - {fileID: 11400000, guid: 85ee1fe903280c8428551ee917f2d7c6, type: 2}
+  - {fileID: 11400000, guid: 6725f6e3fe7097c42bdaa0ad1102841c, type: 2}
   _powerEfficiencyChanged: {fileID: 11400000, guid: 01d4f73f48f7fbd4599c6a71a9699742, type: 2}
   _fanRPMChanged: {fileID: 11400000, guid: 962fcb3f1198e6f428f2cd487339794d, type: 2}
   _pipePressureChanged: {fileID: 11400000, guid: 1a5d941dd9215fd4cb2b185060044828, type: 2}
   _wasteTimerChanged: {fileID: 11400000, guid: 7564ef4e33beb4f40b9fc6ea11844c44, type: 2}
   _closePanel: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _gameLost: {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
-  _powerDrainAmount: 1
-  _pressureDrainAmount: 1
-  _RPMDrainAmount: 1
-  _accumulateWasteAmount: 1
-  _powerDrainSpeed: 0.5
+  _powerDrainAmount: 2
+  _pressureDrainAmount: 3
+  _RPMDrainAmount: 10
+  _accumulateWasteAmount: 2
+  _powerDrainSpeed: 1
   _pressureDrainSpeed: 1
   _RPMDrainSpeed: 1
   _accumulateWasteSpeed: 1
