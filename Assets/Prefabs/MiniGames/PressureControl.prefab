@@ -2239,6 +2239,8 @@ MonoBehaviour:
   _itemHolder: {fileID: 0}
   _closePanel: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _miniGameFinished: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
+  _grabSound: {fileID: 8300000, guid: a4fc52e24a8f09f4b8a22887528ff5d4, type: 3}
+  _soundManager: {fileID: 0}
 --- !u!114 &469817981881269523
 MonoBehaviour:
   m_ObjectHideFlags: 0

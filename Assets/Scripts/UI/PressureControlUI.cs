@@ -5,6 +5,17 @@ public class PressureControlUI : MonoBehaviour
 {
     [SerializeField]
     private GameObject _ui;
+    [Header("Audio Variable")]
+    [SerializeField]
+    private AudioClip _valveTurning;
+    [SerializeField]
+    private SoundManager _soundManager;
+
+    private void Start()
+    {
+        _soundManager.LoadSoundWithOutPath("turning", _valveTurning);
+    }
+
     public void EnableUI(Component sender, object obj)
     {
         bool? setActive = obj as bool?;
@@ -17,6 +28,8 @@ public class PressureControlUI : MonoBehaviour
         ValveRotationChangedEventArgs args = obj as ValveRotationChangedEventArgs;
 
         if (args == null) return;
+
+        _soundManager.PlaySound("turning");
 
         args.Valve.transform.eulerAngles = new Vector3(0, 0, args.ValveRotation * -1);
     }

@@ -196,6 +196,9 @@ MonoBehaviour:
   _barrelPrefab: {fileID: 1881064264273967037, guid: 6beb1d3cf0aae9f49bf91bd2e229fa30, type: 3}
   _barrelSpawnLocation: {fileID: 6119832128055125046}
   _minigameFinished: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
+  _grabSound: {fileID: 8300000, guid: a4fc52e24a8f09f4b8a22887528ff5d4, type: 3}
+  _placeSound: {fileID: 8300000, guid: c0e9d4f3ec9705d44ad26792cb0421eb, type: 3}
+  _soundManager: {fileID: 0}
 --- !u!114 &415060747723909775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +616,10 @@ PrefabInstance:
     - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_Name
       value: WasteConsoleTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989932439947322385, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457386082826074389, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: _interact

@@ -23,6 +23,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameEvent _miniGameFinished;
 
+    [Header("AudioVariables")]
+    [SerializeField]
+    private AudioClip _grabSound;
+    [SerializeField]
+    private SoundManager _soundManager;
 
     private GameObject _brokenPipe;
     private int _currentBrokenPipeIndex;
@@ -37,6 +42,12 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private bool _valveLocked = false;
     private bool _miniGameStarted = false;
     private bool _pipeRemoved = false;
+
+    private void Start()
+    {
+        _soundManager.LoadSoundWithOutPath("grab", _grabSound);
+        _soundManager.SetSFXVolume(1.0f);
+    }
 
     private void SetRandomBrokenPipe()
     {
@@ -78,6 +89,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _brokenPipe.transform.parent = _itemHolder.transform;
         _brokenPipe.transform.localPosition = Vector3.zero;
         _brokenPipe.transform.localEulerAngles = new Vector3(0, 0, 90);
+
+        _soundManager.PlaySound("grab");
     }
 
     private void PlacePipe(string tag, GameObject holder)
@@ -93,12 +106,16 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _pipes[_currentBrokenPipeIndex] = _heldItem;
         _heldItem = null;
         _itemPlaced = true;
+
+        _soundManager.StopSound();
     }
 
     public void GrabItem(Component sender, object obj)
     {
         if (_heldItem != null) return;
         string pipeHolderTag = sender.gameObject.transform.parent.tag;
+
+        _soundManager.PlaySound("grab");
 
         for(int i = 0; i < _pipePrefabs.Count; i++)
         {

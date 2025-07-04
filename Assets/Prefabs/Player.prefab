@@ -263,7 +263,6 @@ GameObject:
   - component: {fileID: 76266570230901813}
   - component: {fileID: 4782660307683828923}
   - component: {fileID: 7994807786281305073}
-  - component: {fileID: 735571602814465076}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -366,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 76266570230901813}
-  _movingSpeed: 3
+  _movingSpeed: 6
   _rotatingSpeed: 10
   _bodyAnim: {fileID: 3719500184469873988}
   _handsAnim: {fileID: 7256123354750154405}
@@ -459,17 +458,5 @@ MonoBehaviour:
       m_Action: Move Direction
       m_Flags: 8
     m_Flags: 0
-  _runningSound: {fileID: 8300000, guid: 3218edf8b132d2449ae41841ecfd2ac2, type: 3}
-  _soundManager: {fileID: 735571602814465076}
---- !u!114 &735571602814465076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7137866149891071014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb18eb845832b144b04070c7a1f080b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _runningSound: {fileID: 8300000, guid: 8cf63818a8be1064a9f9c06cd91ea3ea, type: 3}
+  _soundManager: {fileID: 0}

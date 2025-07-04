@@ -241,6 +241,8 @@ MonoBehaviour:
   - {fileID: 0}
   _progressBar: {fileID: 0}
   _progressSpeed: 10
+  _clickSound: {fileID: 8300000, guid: d202b31e40f09214592193e478fc9e7f, type: 3}
+  _soundManager: {fileID: 0}
 --- !u!114 &2257024124524449931
 MonoBehaviour:
   m_ObjectHideFlags: 0
