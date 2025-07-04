@@ -11,8 +11,6 @@ public class CentralControlPanel : MonoBehaviour
     [SerializeField]
     private float _minigamesInterval;
     [SerializeField]
-    private int _errorRate;
-    [SerializeField]
     private List<GameEvent> _enableMiniGame = new List<GameEvent>();
     [SerializeField]
     private List<GameEvent> _disableMiniGame = new List<GameEvent>();
@@ -65,6 +63,12 @@ public class CentralControlPanel : MonoBehaviour
     private List<bool> _isMinigameEnabled = new List<bool>();
 
     private int _activeMiniGames;
+
+    private int _allowedAmountOfActiveMiniGames = 1;
+
+    private int _completedMinigames;
+
+    private int _maxCompletedMinigames = 5;
     private void Start()
     {
         foreach (GameEvent minigame in _enableMiniGame)
@@ -97,9 +101,8 @@ public class CentralControlPanel : MonoBehaviour
     private IEnumerator SelectRandomMiniGame()
     {
         yield return new WaitForSeconds(_minigamesInterval);
-        int spawnError = UnityEngine.Random.Range(1, _errorRate + 1);
 
-        if (spawnError == 2 && _activeMiniGames != 4)
+        if (_activeMiniGames < _allowedAmountOfActiveMiniGames)
         {
             int index = UnityEngine.Random.Range(0, _enableMiniGame.Count);
 
@@ -256,6 +259,14 @@ public class CentralControlPanel : MonoBehaviour
                 break;
         }
         _activeMiniGames -= 1;
+        _completedMinigames += 1;
+
+        if(_completedMinigames > _maxCompletedMinigames && _allowedAmountOfActiveMiniGames < 4)
+        {
+            _allowedAmountOfActiveMiniGames += 1;
+            _completedMinigames = 0;
+            _maxCompletedMinigames = _maxCompletedMinigames * 2;
+        }
     }
 
     private void Update()
