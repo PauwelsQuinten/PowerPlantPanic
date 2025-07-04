@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 106f3c7365a32134f8f8903e1236afd6
+guid: 9e891b83ba6f90e4fa6ebc6d2443cacb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3461699048677394620
-    second: T_GoldPipe2_0
+      213: -3983496362123741259
+    second: T_GoldPipe2 1_0
   - first:
-      213: -3694152450974134038
-    second: T_GoldPipe2_1
+      213: 6044466248001670991
+    second: T_GoldPipe2 1_1
   - first:
-      213: -2724885005542069982
-    second: T_GoldPipe2_2
+      213: -7470717518573505012
+    second: T_GoldPipe2 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_GoldPipe2_0
+      name: T_GoldPipe2 1_0
       rect:
         serializedVersion: 2
         x: 153
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 447b64c5e0395ffc0800000000000000
-      internalID: -3461699048677394620
+      spriteID: 5b7bd830a27c7b8c0800000000000000
+      internalID: -3983496362123741259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_GoldPipe2_1
+      name: T_GoldPipe2 1_1
       rect:
         serializedVersion: 2
         x: 180
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae05c851bebbbbcc0800000000000000
-      internalID: -3694152450974134038
+      spriteID: f4f4af0170242e350800000000000000
+      internalID: 6044466248001670991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: T_GoldPipe2_2
+      name: T_GoldPipe2 1_2
       rect:
         serializedVersion: 2
         x: 59
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22960e646834f2ad0800000000000000
-      internalID: -2724885005542069982
+      spriteID: c0673289ffda25890800000000000000
+      internalID: -7470717518573505012
       vertices: []
       indices: 
       edges: []
@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_GoldPipe2 1_0: -3983496362123741259
+      T_GoldPipe2 1_1: 6044466248001670991
+      T_GoldPipe2 1_2: -7470717518573505012
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
