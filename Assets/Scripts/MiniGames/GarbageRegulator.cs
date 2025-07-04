@@ -9,6 +9,10 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameObject _barrelSpawnLocation;
     [SerializeField]
+    private GameObject _barrelPickUpTrigger;
+    [SerializeField]
+    private GameObject _barrelPlaceTrigger;
+    [SerializeField]
     private GameEvent _minigameFinished;
 
     private GameObject _heldItem;
@@ -32,6 +36,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         if (_spawnedBarrel != null) return;
         GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
         _spawnedBarrel = go;
+        _barrelPickUpTrigger.SetActive(true);
     }
 
     public void OpenWasteControl(Component sender, object obj)
@@ -45,6 +50,8 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         _heldItem = _spawnedBarrel;
         _heldItem.transform.parent = _itemHolder.transform;
         _heldItem.transform.localPosition = Vector3.zero;
+        _barrelPickUpTrigger.SetActive(false);
+        _barrelPlaceTrigger.SetActive(true);
     }
 
     public void PlaceBarrel(Component sender, object obj)
@@ -53,6 +60,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         if (_heldItem == null) return;
         Destroy(_heldItem);
         _spawnedBarrel = null;
+        _barrelPlaceTrigger.SetActive(false);
         completed();
     }
 }

@@ -10,6 +10,8 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     private GameObject turbineScreen;
     [SerializeField]
     private GameEvent turbinCleared;
+    [SerializeField]
+    private GameEvent _changeCanWalk;
 
 
     private List<GameObject> garbagePositions = new List<GameObject>();
@@ -43,6 +45,7 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     {
         turbinCleared.Raise(this, new MiniGameFinishedEventArgs{FinishedMiniGame = MiniGame.FanBlock});
         turbineScreen.SetActive(false);
+        _changeCanWalk.Raise(this, true);
     }
 
     public void failed()
@@ -53,6 +56,7 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     public void StartMiniGame(Component sender, object obj)
     {
         turbineScreen.SetActive(true);
+        _changeCanWalk.Raise(this, false);
 
         //Make garbage visible and put it on the right location
         SetGarabageLocation();

@@ -24,7 +24,12 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private GameEvent _miniGameFinished;
     [SerializeField]
     private int _valveTurnSpeed = 40;
-
+    [SerializeField]
+    private GameObject _trashcanTrigger;
+    [SerializeField]
+    private List<GameObject> _pipeTriggers = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> _PipeSpawnerTriggers = new List<GameObject>();
 
     private GameObject _brokenPipe;
     private int _currentBrokenPipeIndex;
@@ -51,6 +56,9 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
             if (_brokenPipePrefabs[i].tag != _pipes[randomPipe].tag) continue;
             GameObject brokenPipe = Instantiate(_brokenPipePrefabs[i], _pipes[randomPipe].transform.position, _pipes[randomPipe].transform.rotation);
             _brokenPipe = brokenPipe;
+            _pipeTriggers[_currentBrokenPipeIndex].SetActive(true);
+            _PipeSpawnerTriggers[_currentBrokenPipeIndex].SetActive(true);
+            _trashcanTrigger.SetActive(true);
         }
 
         Destroy(_pipes[randomPipe]);
@@ -133,6 +141,9 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _heldItem = null;
         _activeValve = null;
         _brokenPipe = null;
+        _pipeTriggers[_currentBrokenPipeIndex].SetActive(false);
+        _PipeSpawnerTriggers[_currentBrokenPipeIndex].SetActive(false);
+        _trashcanTrigger.SetActive(false);
         _currentBrokenPipeIndex = -1;
         _miniGameFinished.Raise(this, new MiniGameFinishedEventArgs{ FinishedMiniGame = MiniGame.PipeBroke});
     }
@@ -150,6 +161,9 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _heldItem = null;
         _activeValve = null;
         _brokenPipe = null;
+        _pipeTriggers[_currentBrokenPipeIndex].SetActive(false);
+        _PipeSpawnerTriggers[_currentBrokenPipeIndex].SetActive(false);
+        _trashcanTrigger.SetActive(false);
         _currentBrokenPipeIndex = -1;
     }
 

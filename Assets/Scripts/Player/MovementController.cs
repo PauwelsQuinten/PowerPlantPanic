@@ -15,6 +15,8 @@ public class MovementController : MonoBehaviour
 
     private SlideMovement _sMove;
 
+    private bool _canMove = true;
+
     private void OnEnable()
     {
         _moveDirection.Enable();
@@ -33,6 +35,7 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
+        if (!_canMove) return;
         if(_moveDirection.ReadValue<Vector2>() == Vector2.zero)
         {
             //Stop the moving animations
@@ -60,5 +63,12 @@ public class MovementController : MonoBehaviour
             
             transform.rotation = Quaternion.Euler(0,0, angle);
         }
+    }
+
+    public void ChangeCanMove(Component sender, object obj)
+    {
+        bool? canMove = obj as bool?;
+
+        _canMove = (bool)canMove;
     }
 }

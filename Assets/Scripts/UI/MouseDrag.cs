@@ -36,6 +36,7 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     {
         if (!_onObject) return;
         _clicked = !_clicked;
+        if(_enteredGarbage) _clicked = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
