@@ -1233,8 +1233,16 @@ PrefabInstance:
       value: -0.256
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _RPMDrainAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: _powerDrainSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _powerDrainAmount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: _minigamesInterval
@@ -1242,6 +1250,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: _pressureDrainAmount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _accumulateWasteAmount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
