@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Garbage
+  - Red
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX

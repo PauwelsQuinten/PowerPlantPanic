@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da841f9419073a6438a901114a5dc800
+guid: 51dc0900ccbca8c4d8584d3e85719aad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8583831032450598246
-    second: EndScreen_PlaceHolder_0
+      213: 7534776770894822976
+    second: Screenshot 2025-07-01 115056_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EndScreen_PlaceHolder_0
+      name: Screenshot 2025-07-01 115056_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 204
         y: 0
-        width: 737
-        height: 573
+        width: 938
+        height: 673
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9abec2b72b10e880800000000000000
-      internalID: -8583831032450598246
+      spriteID: 04efc0b5d87e09860800000000000000
+      internalID: 7534776770894822976
       vertices: []
       indices: 
       edges: []
@@ -125,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a443b2919f271ff458105cef99d92f02
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EndScreen_PlaceHolder_0: -8583831032450598246
+      Screenshot 2025-07-01 115056_0: 7534776770894822976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,11 +15,13 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     List<GameObject> _sliderObject = new List<GameObject>();
     [SerializeField]
-    List<GameObject> _disiredLocations = new List<GameObject>();
+    List<GameObject> _desiredLocations = new List<GameObject>();
     [SerializeField]
     private GameEvent _completedMiniGame;
     [SerializeField]
     private GameEvent _failedMiniGame;
+    [SerializeField]
+    private GameEvent _disableTrigger;
     [SerializeField]
     private List<Image> _lights;
     [SerializeField]
@@ -56,7 +58,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _isHoldingSlider = false;
         _activeSlider = null;
         _timer = 0;
-        _completedMiniGame.Raise(this, EventArgs.Empty);
+        _completedMiniGame.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.PowerRegulating});
         _updateProgress = false;
         _yStartPoints.Clear();
         _yfinishPoints.Clear();
@@ -77,6 +79,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _updateProgress = false;
         _yStartPoints.Clear();
         _yfinishPoints.Clear();
+        _disableTrigger.Raise(this, EventArgs.Empty);
         foreach (Image image in _lights)
         {
             image.color = Color.red;
@@ -105,7 +108,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             newPos.y = _yStartPoints[i];
             _sliderObject[i].transform.localPosition = newPos;
             newPos.y = _yfinishPoints[i];
-            _disiredLocations[i].transform.localPosition = newPos;
+            _desiredLocations[i].transform.localPosition = newPos;
         }
 
         _miniGameUI.SetActive(true);
@@ -142,7 +145,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     {
         for(int i = 0; i < _sliderObject.Count; i++)
         {
-            if (_sliderObject[i].transform.position.y == _disiredLocations[i].transform.position.y)
+            if (_sliderObject[i].transform.position.y == _desiredLocations[i].transform.position.y)
             {
                 if (!_completedSliders.Contains(_sliderObject[i]))
                     _completedSliders.Add(_sliderObject[i]);
