@@ -312,7 +312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _openControlPanel: {fileID: 11400000, guid: 64702b8d56bf3e848b99b004111217ee, type: 2}
   _minigamesInterval: 10
-  _errorRate: 2
   _enableMiniGame:
   - {fileID: 11400000, guid: 1bc734a01b73f38498bb9520cb39928c, type: 2}
   - {fileID: 11400000, guid: c17c77cc858e76a48b13dd12fcdbb350, type: 2}

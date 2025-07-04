@@ -5,22 +5,36 @@ public class PressureControlUI : MonoBehaviour
 {
     [SerializeField]
     private GameObject _ui;
+
     [Header("Audio Variable")]
     [SerializeField]
     private AudioClip _valveTurning;
     [SerializeField]
     private SoundManager _soundManager;
 
+    [SerializeField]
+    private GameEvent _ChangeCanMove;
+    
     private void Start()
     {
         _soundManager.LoadSoundWithOutPath("turning", _valveTurning);
     }
 
-    public void EnableUI(Component sender, object obj)
+
+    public void EnableUi(Component sender, object obj)
+
     {
         bool? setActive = obj as bool?;
-        if ((bool)setActive) _ui.SetActive(true);
-        else _ui.SetActive(false);
+        if ((bool)setActive)
+        {
+            _ui.SetActive(true);
+            _ChangeCanMove.Raise(this, false);
+        }
+        else
+        {
+            _ui.SetActive(false);
+            _ChangeCanMove.Raise(this, true);
+        }
     }
 
     public void ValveRotationChanged(Component sender, object obj)

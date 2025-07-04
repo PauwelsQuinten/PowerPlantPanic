@@ -28,6 +28,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private Image _progressBar;
     [SerializeField]
     private float _progressSpeed;
+    [SerializeField]
+    private GameEvent _changeCanWalk;
 
     [Header("Sound Variables")]
     [SerializeField]
@@ -124,6 +126,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         }
 
         _miniGameUI.SetActive(true);
+        _changeCanWalk.Raise(this, false);
     }
 
     private void MoveRandomSlider(GameObject activeSlider)
@@ -238,5 +241,6 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     {
         yield return new WaitForSeconds(0.75f);
         _miniGameUI.SetActive(false);
+        _changeCanWalk.Raise(this, true);
     }
 }

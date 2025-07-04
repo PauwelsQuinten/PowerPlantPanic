@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 6949915005602939962}
   - component: {fileID: 4954848792546657602}
   m_Layer: 5
-  m_Name: Gauge (1)
+  m_Name: WasteLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,12 +9,12 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     private void Update()
     {
-        if(_onObject == true &&  _clicked == true)
+        if(_onObject && _clicked)
         {
             transform.position = Input.mousePosition;
         }
 
-        if (_enteredGarbage)
+        if (_enteredGarbage && !_clicked)
         {
             _timer += Time.deltaTime;
 
@@ -34,12 +34,18 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (!_onObject) return;
         _clicked = !_clicked;
+        if(_enteredGarbage) _clicked = false;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         _enteredGarbage = true;
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        _enteredGarbage = false;
     }
 
     private void OnEnable()

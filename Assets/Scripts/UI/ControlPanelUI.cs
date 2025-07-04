@@ -18,6 +18,8 @@ public class ControlPanelUI : MonoBehaviour
     private Image _wasteLight;
     [SerializeField]
     private GameEvent _gameLost;
+    [SerializeField]
+    private GameEvent _ChangeCanMove;
 
     [Header("Sound Variables")]
     [SerializeField]
@@ -33,11 +35,19 @@ public class ControlPanelUI : MonoBehaviour
     public void EnableUi(Component sender, object obj)
     {
         bool? setActive = obj as bool?;
-        if((bool)setActive) _ui.SetActive(true);
-        else _ui.SetActive(false);
+        if ((bool)setActive)
+        {
+            _ui.SetActive(true);
+            _ChangeCanMove.Raise(this, false);
+        }
+        else
+        {
+            _ui.SetActive(false);
+            _ChangeCanMove.Raise(this, true);
+        }
     }
 
-    public void PowerEfficiencyChanged(Component sender, object obj)
+        public void PowerEfficiencyChanged(Component sender, object obj)
     {
         PowerEfficiencyChangedEventArgs args = obj as PowerEfficiencyChangedEventArgs;
         if (args == null) return;
