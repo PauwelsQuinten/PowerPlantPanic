@@ -1174,6 +1174,14 @@ PrefabInstance:
       propertyPath: _ui
       value: 
       objectReference: {fileID: 1339542044}
+    - target: {fileID: 642703184053148743, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: _soundManager
+      value: 
+      objectReference: {fileID: 200784404}
+    - target: {fileID: 642703184053148743, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: _valveTurning
+      value: 
+      objectReference: {fileID: 8300000, guid: 65bbccba878c5ca478462c4d90c2bf6e, type: 3}
     - target: {fileID: 1784073696290054026, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 845.98
