@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1aab9c9e0a3ddcc4aae766a0f00f2b36
+guid: 6c52f14a89fcd6e4ba4453fd64e8ecff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8873424790877686958
-    second: T_Map_0
+      213: 5571724573644040009
+    second: T_DoorYellow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_Map_0
+      name: T_DoorYellow_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4547
-        height: 4775
+        x: 428
+        y: 18
+        width: 102
+        height: 929
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25337968a234bd480800000000000000
-      internalID: -8873424790877686958
+      spriteID: 9472e5ebafdb25d40800000000000000
+      internalID: 5571724573644040009
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      T_Map_0: -8873424790877686958
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
