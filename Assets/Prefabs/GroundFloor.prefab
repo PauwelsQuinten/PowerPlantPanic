@@ -84,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8873424790877686958, guid: 1aab9c9e0a3ddcc4aae766a0f00f2b36, type: 3}
+  m_Sprite: {fileID: 4981069359172628532, guid: e00959a22a2cd4f4d80d3e6fbf4f047e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20.48, y: 20.48}
+  m_Size: {x: 45.47, y: 47.755157}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -150,8 +150,10 @@ EdgeCollider2D:
   - {x: 20.215523, y: 9.5826235}
   - {x: 19.578915, y: 8.980642}
   - {x: 19.593374, y: -11.24635}
-  - {x: 19.676126, y: -13.1942}
-  - {x: 20.26149, y: -13.710132}
+  - {x: 19.632727, y: -12.385876}
+  - {x: 19.297703, y: -12.730868}
+  - {x: 19.29498, y: -13.452739}
+  - {x: 19.86004, y: -14.030207}
   - {x: 15.76748, y: -17.578344}
   - {x: 15.69377, y: -18.134785}
   - {x: 16.854822, y: -19.58104}
