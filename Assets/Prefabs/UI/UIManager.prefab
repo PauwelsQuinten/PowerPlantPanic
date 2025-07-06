@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2320283844131842775}
   - component: {fileID: 6980723673616064319}
   - component: {fileID: 3567837852882869339}
-  - component: {fileID: 1418606777079147112}
   - component: {fileID: 642703184053148743}
+  - component: {fileID: 1418606777079147112}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -113,6 +113,22 @@ MonoBehaviour:
   _ChangeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
   _explosionSound: {fileID: 8300000, guid: 5511d8ce3ad957c4e872c52392a6c17a, type: 3}
   _soundManager: {fileID: 0}
+--- !u!114 &642703184053148743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b4c5b502fff2949a5363064352b312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ui: {fileID: 0}
+  _valveTurning: {fileID: 8300000, guid: 65bbccba878c5ca478462c4d90c2bf6e, type: 3}
+  _soundManager: {fileID: 0}
+  _ChangeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
 --- !u!114 &1418606777079147112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +266,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 642703184053148743}
         m_TargetAssemblyTypeName: PressureControlUI, Assembly-CSharp
-        m_MethodName: EnableUI
+        m_MethodName: EnableUi
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -286,19 +302,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &642703184053148743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4375979170619066883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b4c5b502fff2949a5363064352b312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ui: {fileID: 0}
-  _valveTurning: {fileID: 8300000, guid: 65bbccba878c5ca478462c4d90c2bf6e, type: 3}
-  _soundManager: {fileID: 0}
-  _ChangeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}

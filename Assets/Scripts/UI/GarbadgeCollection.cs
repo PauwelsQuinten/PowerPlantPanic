@@ -13,11 +13,6 @@ public class GarbageCollection : MonoBehaviour
     private float _removedGarbage = 0, _totalGarbage, _timer;
     public UnityEvent RemoveAllGarbage;
 
-    private void Start()
-    {
-       _totalGarbage = GameObject.FindGameObjectsWithTag(garbageTag).Length;
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag != garbageTag) return;
@@ -35,6 +30,12 @@ public class GarbageCollection : MonoBehaviour
     {
         if (other.gameObject.tag != garbageTag) return;
 
-        _removedGarbage--; // add 1 to the totale count 
+        _removedGarbage--;
+    }
+
+    private void OnEnable()
+    {
+        _removedGarbage = 0;
+        _totalGarbage = GameObject.FindGameObjectsWithTag(garbageTag).Length;
     }
 }
