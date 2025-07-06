@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9d519b7d624a2b44afddac6c2607723
+guid: e8704996a9601a140bb4cdd5fb070b22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3763160351898992969
-    second: T_TrashIcon_0
+      213: 8739409211457792975
+    second: T_Barrle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_TrashIcon_0
+      name: T_Barrle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 7
-        width: 308
-        height: 325
+        x: 18
+        y: 6
+        width: 700
+        height: 955
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94106c7e66e693430800000000000000
-      internalID: 3763160351898992969
+      spriteID: fcbe7bbdf5e984970800000000000000
+      internalID: 8739409211457792975
       vertices: []
       indices: 
       edges: []

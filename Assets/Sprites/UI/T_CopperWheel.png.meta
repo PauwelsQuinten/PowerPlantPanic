@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9d519b7d624a2b44afddac6c2607723
+guid: 25c38e1cfe8b5f448a8f5cd766d69285
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3763160351898992969
-    second: T_TrashIcon_0
+      213: -23480162872593045
+    second: T_CopperWheel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_TrashIcon_0
+      name: T_CopperWheel_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 7
-        width: 308
-        height: 325
+        x: 20
+        y: 24
+        width: 277
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94106c7e66e693430800000000000000
-      internalID: 3763160351898992969
+      spriteID: b65f5b09ae49caff0800000000000000
+      internalID: -23480162872593045
       vertices: []
       indices: 
       edges: []
