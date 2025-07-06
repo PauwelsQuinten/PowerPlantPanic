@@ -93,6 +93,7 @@ public class MovementController : MonoBehaviour
         }
         if (_velocity != Vector2.zero && !_soundManager.SfxSource.isPlaying)
         {
+            _soundManager.SetSFXVolume(1);
             _soundManager.PlaySound("walking");
         }
     }

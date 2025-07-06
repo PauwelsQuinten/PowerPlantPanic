@@ -15,7 +15,7 @@ public class ControlPanelUI : MonoBehaviour
     [SerializeField]
     private GameObject _pressureNeedle;
     [SerializeField]
-    private Image _wasteLight;
+    private GameObject _wasteLight;
     [SerializeField]
     private GameEvent _gameLost;
     [SerializeField]
@@ -77,11 +77,9 @@ public class ControlPanelUI : MonoBehaviour
         WasteTimerChangedEventArgs args = obj as WasteTimerChangedEventArgs;
         if (args == null) return;
 
-        if (_wasteLight.color == Color.white)
-            _wasteLight.color = Color.red;
-        else _wasteLight.color = Color.white;
+        _wasteLight.SetActive(!_wasteLight.activeSelf);
 
-        if(args.WasteTimer == 100) _wasteLight.color = Color.white;
+        if (args.WasteTimer == 100) _wasteLight.SetActive(true);
     }
 
     public void GiveUp()

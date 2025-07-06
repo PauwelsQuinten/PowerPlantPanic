@@ -156,6 +156,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         }
 
         //Click Sound Implementation
+        _soundManager.SetSFXVolume(1);
         _soundManager.PlaySound("click");
     }
 

@@ -43,7 +43,8 @@ public class PressureControlUI : MonoBehaviour
 
         if (args == null) return;
 
-        _soundManager.PlaySound("turning");
+        if(!_soundManager.SfxSource.isPlaying)
+            _soundManager.PlaySound("turning");
 
         args.Valve.transform.eulerAngles = new Vector3(0, 0, args.ValveRotation * -1);
     }
