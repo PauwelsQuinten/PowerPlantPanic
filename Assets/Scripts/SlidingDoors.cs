@@ -44,7 +44,7 @@ public class SlidingDoors : MonoBehaviour
 
         while(Vector2.Distance(currentLeftDoorPos, leftDoorTargetPos) > 0.01f)
         {
-            doorLeft.transform.position = Vector2.MoveTowards(doorLeft.transform.position, leftDoorTargetPos, doorSpeed * Time.deltaTime);
+            doorLeft.transform.position = Vector2.MoveTowards(doorLeft.transform.position, doorLeftPosition.position - transform.right * ((doorLeft.GetComponent<SpriteRenderer>().size.x / 2) * doorLeft.transform.localScale.x), doorSpeed * Time.deltaTime);
             doorRight.transform.position = Vector2.MoveTowards(doorRight.transform.position, doorRightPosition.position + transform.right * ((doorRight.GetComponent<SpriteRenderer>().size.x / 2) * doorRight.transform.localScale.x), doorSpeed * Time.deltaTime);
 
             yield return null;
