@@ -1068,17 +1068,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2584044666509108421, guid: 71d8fccb5ce065d49a7db47ea5c35782, type: 3}
   m_PrefabInstance: {fileID: 1878519228}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &540546815 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3473793204097021622, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
-  m_PrefabInstance: {fileID: 247872550}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &546710239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 35714859452529815, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
@@ -1151,11 +1140,11 @@ PrefabInstance:
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_lights.Array.data[0]'
       value: 
-      objectReference: {fileID: 607767381}
+      objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_lights.Array.data[1]'
       value: 
-      objectReference: {fileID: 540546815}
+      objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_sliderObject.Array.data[0]'
       value: 
@@ -1279,17 +1268,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ab209637245bf849b07e5df5490856f, type: 3}
---- !u!114 &607767381 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1989291979581741721, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
-  m_PrefabInstance: {fileID: 247872550}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &732491352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 537735015189345653, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
@@ -1960,7 +1938,7 @@ PrefabInstance:
     - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: _wasteLight
       value: 
-      objectReference: {fileID: 1626199949}
+      objectReference: {fileID: 0}
     - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: _soundManager
       value: 
@@ -2487,17 +2465,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
---- !u!114 &1626199949 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4954848792546657602, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
-  m_PrefabInstance: {fileID: 1858152551}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1629209020 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7145515153288438914, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
