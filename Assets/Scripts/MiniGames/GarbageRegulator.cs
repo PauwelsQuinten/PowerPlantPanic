@@ -63,7 +63,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     {
         if (_heldItem != null) return;
 
-        _soundManager.SetSFXVolume(1);
+        _soundManager.SetSFXVolume(1f);
         _soundManager.PlaySound("grab");
 
         _heldItem = _spawnedBarrel;

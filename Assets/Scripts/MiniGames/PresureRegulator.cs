@@ -54,7 +54,6 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private void Start()
     {
         _soundManager.LoadSoundWithOutPath("grab", _grabSound);
-        _soundManager.SetSFXVolume(1.0f);
     }
 
     private void SetRandomBrokenPipe()
@@ -101,6 +100,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _brokenPipe.transform.localPosition = Vector3.zero;
         _brokenPipe.transform.localEulerAngles = new Vector3(0, 0, 90);
 
+        _soundManager.SetSFXVolume(1);
         _soundManager.PlaySound("grab");
     }
 

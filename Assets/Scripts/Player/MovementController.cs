@@ -1,4 +1,3 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rigidbody2D;
@@ -91,10 +90,10 @@ public class MovementController : MonoBehaviour
         {
             _soundManager.StopSound();
         }
-        if (_velocity != Vector2.zero && !_soundManager.SfxSource.isPlaying)
+        if (_velocity != Vector2.zero)
         {
-            _soundManager.SetSFXVolume(1);
-            _soundManager.PlaySound("walking");
+           _soundManager.SetSFXVolume(1);
+           _soundManager.PlaySound("walking");
         }
     }
 

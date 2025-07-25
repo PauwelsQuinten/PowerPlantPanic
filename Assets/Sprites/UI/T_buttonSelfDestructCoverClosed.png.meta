@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_buttonSelfDestructCoverClosed_0: -4039790716877900637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

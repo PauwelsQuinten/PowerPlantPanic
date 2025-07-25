@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      T_GoldWheel_0: 4605943151259411406
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

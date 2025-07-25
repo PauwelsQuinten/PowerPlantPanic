@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource SfxSource { get; private set; } //For sound effects
     public AudioSource MusicSource { get; private set; } //For background music
+
     private Dictionary<string, AudioClip> _soundClips;
+    private List<AudioClip> _activeClips = new List<AudioClip>();
 
     private void Awake()
     {
@@ -61,9 +64,17 @@ public class SoundManager : MonoBehaviour
     // Play sound effect 
     public void PlaySound(string name)
     {
+
         if (_soundClips.ContainsKey(name))
         {
-            SfxSource.PlayOneShot(_soundClips[name]);
+            AudioClip clip = _soundClips[name];
+
+            if (_activeClips.Contains(clip)) return;
+            
+            _activeClips.Add(clip);
+            SfxSource.PlayOneShot(clip);
+
+            StartCoroutine(RemoveClipAfterPlaying(clip, clip.length));
         }
         else
         {
@@ -107,5 +118,11 @@ public class SoundManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         MusicSource.volume = Mathf.Clamp01(volume);
+    }
+
+    private IEnumerator RemoveClipAfterPlaying(AudioClip clip, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        _activeClips.Remove(clip);
     }
 }

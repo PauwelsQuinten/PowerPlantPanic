@@ -102,7 +102,7 @@ public class CentralControlPanel : MonoBehaviour
 
         //Load in the sounds
         _soundManager.LoadSoundWithOutPath("Alarm", _alarmSound);
-        _soundManager.SetSFXVolume(0.5f);
+        _soundManager.SetSFXVolume(0.1f);
 
         StartCoroutine(SelectRandomMiniGame());
     }

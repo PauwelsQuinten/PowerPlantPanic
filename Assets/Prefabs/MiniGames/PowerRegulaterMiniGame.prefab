@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4566844666750865778}
   - component: {fileID: 1954785245920496044}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Slider_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 5970864791276681041}
   - component: {fileID: 504884789703849648}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Slider_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504385423320002780}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderObj_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 6861968063987864119}
   - component: {fileID: 1268537932284235881}
   m_Layer: 5
-  m_Name: DesiredSpot
+  m_Name: DesiredSpot_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741617836260106482}
   m_Layer: 5
-  m_Name: Slider (2)
+  m_Name: SliderObj_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -658,7 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4796848166290621226}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: SliderObj_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 3552649694947647094}
   - component: {fileID: 8461739930964067911}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Slider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 5631314198690030480}
   - component: {fileID: 9047517235440385884}
   m_Layer: 5
-  m_Name: DesiredSpot
+  m_Name: DesiredSpot_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 7888378452694682196}
   - component: {fileID: 3007369035065607000}
   m_Layer: 5
-  m_Name: DesiredSpot
+  m_Name: DesiredSpot_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1258,13 +1258,13 @@ RectTransform:
   m_GameObject: {fileID: 8340582975977306163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 395417396415181024}
+  - {fileID: 4796848166290621226}
   - {fileID: 504385423320002780}
   - {fileID: 741617836260106482}
-  - {fileID: 4796848166290621226}
   - {fileID: 6448411431091337815}
   - {fileID: 8373538223300595170}
   - {fileID: 4325063751283303588}

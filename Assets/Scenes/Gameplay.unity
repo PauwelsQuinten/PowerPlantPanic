@@ -230,6 +230,18 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5182522704125997795, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182522704125997795, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182522704125997795, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182522704125997795, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -375,11 +387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1175,27 +1187,27 @@ PrefabInstance:
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_sliderObject.Array.data[0]'
       value: 
-      objectReference: {fileID: 732491352}
+      objectReference: {fileID: 1834066168}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_sliderObject.Array.data[1]'
       value: 
-      objectReference: {fileID: 2061818667}
+      objectReference: {fileID: 732491352}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_sliderObject.Array.data[2]'
       value: 
-      objectReference: {fileID: 1834066168}
+      objectReference: {fileID: 2061818667}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_desiredLocations.Array.data[0]'
       value: 
-      objectReference: {fileID: 1349080291}
+      objectReference: {fileID: 2059541460}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_desiredLocations.Array.data[1]'
       value: 
-      objectReference: {fileID: 194304245}
+      objectReference: {fileID: 1349080291}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_desiredLocations.Array.data[2]'
       value: 
-      objectReference: {fileID: 2059541460}
+      objectReference: {fileID: 194304245}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1783,6 +1795,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2382255452762252047, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
   m_PrefabInstance: {fileID: 487308557}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &913171926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+  m_PrefabInstance: {fileID: 1580492951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e37b9e2567655d64386613e31c651e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1069696099 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3348717182299947896, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
@@ -2511,6 +2534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CentralControlPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8730171342479409007, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _miniGame
+      value: 
+      objectReference: {fileID: 913171926}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2578,6 +2605,10 @@ PrefabInstance:
     - target: {fileID: 5556162201321774665, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
       propertyPath: m_Name
       value: WasteConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189457574547270190, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
+      propertyPath: _miniGame
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8705223783012958765, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
       propertyPath: _itemHolder
@@ -3124,6 +3155,10 @@ PrefabInstance:
       propertyPath: m_Points.Array.data[86].y
       value: 20.603598
       objectReference: {fileID: 0}
+    - target: {fileID: 7885933110765647453, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8596610176117954220, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3162,6 +3197,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8596610176117954220, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680583737334249459, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9116902608777028121, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
