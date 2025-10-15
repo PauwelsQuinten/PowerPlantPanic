@@ -20,11 +20,20 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     private AudioClip _grabSound;
     [SerializeField]
     private AudioClip _placeSound;
-    [SerializeField]
+
+
     private SoundManager _soundManager;
 
     private GameObject _heldItem;
     private GameObject _spawnedBarrel;
+
+    private void OnEnable()
+    {
+        if (GameObject.Find("SoundManager") != null)
+            _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        else
+            Debug.Log("SoundManager not found");
+    }
 
     private void Start()
     {

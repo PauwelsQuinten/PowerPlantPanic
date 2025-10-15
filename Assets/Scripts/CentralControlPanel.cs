@@ -46,7 +46,7 @@ public class CentralControlPanel : MonoBehaviour
     [Header("Sound Variables")]
     [SerializeField]
     private AudioClip _alarmSound;
-    [SerializeField]
+
     private SoundManager _soundManager;
 
     private int _lastEnabledMiniGame = -1;
@@ -73,6 +73,14 @@ public class CentralControlPanel : MonoBehaviour
     private int _allowedActiveMinigames = 1;
     private int _completedMinigames = 0;
     private int _maxCompletedMinigames = 5;
+
+    private void OnEnable()
+    {
+        if (GameObject.Find("SoundManager") != null)
+            _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        else
+            Debug.Log("SoundManager not found");
+    }
 
     private void Start()
     {
