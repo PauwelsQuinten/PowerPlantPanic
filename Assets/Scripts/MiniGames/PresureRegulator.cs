@@ -137,6 +137,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
             go.transform.localPosition = Vector3.zero;
             go.transform.localEulerAngles = new Vector3(0, 0, 90);
         }
+        _isCarryingPipe = true;
     }
 
     public void TrashItem(Component sender, object obj)
@@ -144,6 +145,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         if (sender.transform.parent.gameObject.transform.parent.gameObject != gameObject) return;
         if (_heldItem == null) return;
 
+        _isCarryingPipe = false;
         Destroy(_heldItem.gameObject);
     }
 
