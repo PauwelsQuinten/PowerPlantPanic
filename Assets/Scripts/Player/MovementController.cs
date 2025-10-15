@@ -14,9 +14,9 @@ public class MovementController : MonoBehaviour
     private InputAction _moveDirection;
     [SerializeField]
     private AudioClip _runningSound;
-    [SerializeField]
-    private SoundManager _soundManager;
 
+  
+    private SoundManager _soundManager;
     private Vector2 _lastPosition, _velocity;
 
 
@@ -27,6 +27,11 @@ public class MovementController : MonoBehaviour
     private void OnEnable()
     {
         _moveDirection.Enable();
+
+        if (GameObject.Find("SoundManager") != null)
+            _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        else
+            Debug.Log("SoundManager not found");
     }
 
     private void OnDisable()

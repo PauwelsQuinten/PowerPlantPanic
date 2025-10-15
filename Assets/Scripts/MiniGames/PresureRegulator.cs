@@ -27,8 +27,6 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private AudioClip _grabSound;
     [SerializeField]
-    private SoundManager _soundManager;
-    [SerializeField]
     private int _valveTurnSpeed = 40;
     [SerializeField]
     private GameObject _trashcanTrigger;
@@ -36,6 +34,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private List<GameObject> _pipeTriggers = new List<GameObject>();
     [SerializeField]
     private List<GameObject> _PipeSpawnerTriggers = new List<GameObject>();
+
+    private SoundManager _soundManager;
 
     private GameObject _brokenPipe;
     private int _currentBrokenPipeIndex;
@@ -50,6 +50,14 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private bool _valveLocked = false;
     private bool _miniGameStarted = false;
     private bool _pipeRemoved = false;
+
+    private void OnEnable()
+    {
+        if (GameObject.Find("SoundManager") != null)
+            _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        else
+            Debug.Log("SoundManager not found");
+    }
 
     private void Start()
     {
