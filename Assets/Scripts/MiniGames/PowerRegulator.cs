@@ -34,7 +34,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     [Header("Sound Variables")]
     [SerializeField]
     private AudioClip _clickSound;
-    [SerializeField]
+
     private SoundManager _soundManager;
 
     private List<int> _yStartPoints = new List<int>();
@@ -51,6 +51,14 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private float _timer;
 
     private bool _updateProgress;
+
+    private void OnEnable()
+    {
+        if (GameObject.Find("SoundManager") != null)
+            _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        else
+            Debug.Log("SoundManager not found");
+    }
 
     private void Start()
     {

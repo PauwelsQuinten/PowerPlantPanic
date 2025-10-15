@@ -24,8 +24,17 @@ public class ControlPanelUI : MonoBehaviour
     [Header("Sound Variables")]
     [SerializeField]
     private AudioClip _explosionSound;
-    [SerializeField]
+
+
     private SoundManager _soundManager;
+
+    private void OnEnable()
+    {
+        if (GameObject.Find("SoundManager") != null)
+            _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        else
+            Debug.Log("SoundManager not found");
+    }
 
     private void Start()
     {

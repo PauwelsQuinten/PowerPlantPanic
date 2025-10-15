@@ -9,12 +9,20 @@ public class PressureControlUI : MonoBehaviour
     [Header("Audio Variable")]
     [SerializeField]
     private AudioClip _valveTurning;
-    [SerializeField]
-    private SoundManager _soundManager;
 
     [SerializeField]
     private GameEvent _ChangeCanMove;
-    
+
+    private SoundManager _soundManager;
+
+    private void OnEnable()
+    {
+        if (GameObject.Find("SoundManager") != null)
+            _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        else
+            Debug.Log("SoundManager not found");
+    }
+
     private void Start()
     {
         _soundManager.LoadSoundWithOutPath("turning", _valveTurning);
