@@ -52,6 +52,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private bool _updateProgress;
 
+    private bool _miniGameFinished;
+
     private void OnEnable()
     {
         if (GameObject.Find("SoundManager") != null)
@@ -67,6 +69,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        _miniGameFinished = false;
         _updateProgress = true;
         foreach (Image image in _lights)
         {
@@ -76,6 +79,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     }
     public void completed()
     {
+        _miniGameFinished = true;
         _completedSliders.Clear();
         _isHoldingSlider = false;
         _activeSlider = null;
@@ -184,6 +188,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private void MoveSlider(Vector3 newpos)
     {
+        if (_miniGameFinished) return;
         _activeSlider.transform.position = newpos;
 
         MoveRandomSlider(_activeSlider);
