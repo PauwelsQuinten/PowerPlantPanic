@@ -33,7 +33,7 @@ public class CentralControlPanel : MonoBehaviour
     [SerializeField]
     private int _RPMDrainAmount = 1;
     [SerializeField]
-    private int _accumulateWasteAmount = 1;
+    private float _accumulateWasteAmount = 1;
     [SerializeField]
     private float _powerDrainSpeed = 0.5f;
     [SerializeField]
@@ -54,7 +54,7 @@ public class CentralControlPanel : MonoBehaviour
     private int _powerEfficiency = 100;
     private int _fanRPM = 3600;
     private int _pipePSI = 150;
-    private int _wasteTimer = 100;
+    private int _wasteTimer = 400;
 
     private Coroutine _decreaseOutputEfficiency;
     private Coroutine _decreaseFanRPM;
@@ -195,7 +195,7 @@ public class CentralControlPanel : MonoBehaviour
     {
         yield return new WaitForSeconds(_accumulateWasteSpeed);
 
-        _wasteTimer -= _accumulateWasteAmount;
+        _wasteTimer -= (int)_accumulateWasteAmount;
 
         PlayAlarm();
 
