@@ -2541,6 +2541,14 @@ PrefabInstance:
       propertyPath: _minigamesInterval
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _accumulateWasteSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _accumulateWasteAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: m_Name
       value: CentralControlPanel

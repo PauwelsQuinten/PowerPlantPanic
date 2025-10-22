@@ -53,6 +53,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private bool _uiIsOpen = false;
     private bool _canOpenPanel = true;
 
+    private int _previousPipe;
+
     private void OnEnable()
     {
         if (GameObject.Find("SoundManager") != null)
@@ -69,6 +71,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private void SetRandomBrokenPipe()
     {
         int randomPipe = UnityEngine.Random.Range(0, _pipes.Count);
+
+        while(randomPipe == _previousPipe)
+        {
+            randomPipe = UnityEngine.Random.Range(0, _pipes.Count);
+        }
 
         _currentBrokenPipeIndex = randomPipe;
 
