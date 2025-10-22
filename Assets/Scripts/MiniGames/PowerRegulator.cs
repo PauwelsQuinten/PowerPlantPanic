@@ -69,6 +69,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        if (_updateProgress) return;
         _miniGameFinished = false;
         _updateProgress = true;
         foreach (Image image in _lights)

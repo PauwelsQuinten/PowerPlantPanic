@@ -50,6 +50,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private bool _valveLocked = false;
     private bool _miniGameStarted = false;
     private bool _pipeRemoved = false;
+    private bool _uiIsOpen = false;
+    private bool _canOpenPanel = true;
 
     private void OnEnable()
     {
@@ -203,6 +205,10 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     public void OpenPressureControl(Component sender, object obj)
     {
         if (_heldItem != null) return;
+        if (_uiIsOpen) return;
+        if (!_canOpenPanel) return;
+        _canOpenPanel = false;
+        _uiIsOpen = true;
         _openPressureControlUI.Raise(this, true);
         StartMiniGame(sender, obj);
     }
@@ -211,7 +217,12 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     {
         if (_closePanel.action.WasPressedThisFrame())
         {
-            _openPressureControlUI.Raise(this, false);
+            if (_uiIsOpen)
+            {
+                _openPressureControlUI.Raise(this, false);
+                _uiIsOpen = false;
+                StartCoroutine(CanOpenPanel());
+            }
         }
 
         if (!_miniGameStarted) return;
@@ -263,5 +274,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
 
             completed();
         }
+    }
+
+    private IEnumerator CanOpenPanel()
+    {
+        yield return new WaitForEndOfFrame();
+        _canOpenPanel = true;
     }
 }

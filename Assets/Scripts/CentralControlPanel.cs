@@ -74,6 +74,8 @@ public class CentralControlPanel : MonoBehaviour
     private int _completedMinigames = 0;
     private int _maxCompletedMinigames = 5;
 
+    private bool _canClosePanel = false;
+
     private void OnEnable()
     {
         if (GameObject.Find("SoundManager") != null)
@@ -206,9 +208,17 @@ public class CentralControlPanel : MonoBehaviour
         _accumulateWaste = StartCoroutine(AccumulateWaste());
     }
 
+    private IEnumerator AllowClose()
+    {
+        yield return new WaitForEndOfFrame();
+        _canClosePanel = true;
+    }
+
     public void OpenControlPanel(Component sender, object obj)
     {
+        if (_canClosePanel) return;
         _openControlPanel.Raise(this, true);
+        StartCoroutine(AllowClose());
     }
 
     public void StartOutputMiniGame(Component sender, object obj)
@@ -300,7 +310,10 @@ public class CentralControlPanel : MonoBehaviour
     private void Update()
     {
         if (!_closePanel.action.WasPressedThisFrame()) return;
+        if (!_canClosePanel) return;
+
         _openControlPanel.Raise(this, false);
+        _canClosePanel = false;
     }
 
     private void PlayAlarm()
