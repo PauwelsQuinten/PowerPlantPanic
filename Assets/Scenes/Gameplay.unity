@@ -303,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8340582975977306163, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061865989898011952, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
       propertyPath: m_IsActive
@@ -1168,9 +1168,17 @@ PrefabInstance:
       value: PoweOutputControls
       objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: _topValue
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _miniGameUI
       value: 
       objectReference: {fileID: 115908038}
+    - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: _bottomValue
+      value: -130
+      objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _progressBar
       value: 
@@ -1179,6 +1187,10 @@ PrefabInstance:
       propertyPath: _soundManager
       value: 
       objectReference: {fileID: 200784404}
+    - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: _spaceBetween
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_lights.Array.data[0]'
       value: 
